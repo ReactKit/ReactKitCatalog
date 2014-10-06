@@ -1,0 +1,3 @@
+[submodule "Vendor/ReactKit"]
+	path = Vendor/ReactKit
+	url = https://github.com/ReactKit/ReactKit.git
