@@ -17,6 +17,7 @@ struct Catalog
     static func allCatalogs() -> [Catalog]
     {
         return [
+            Catalog(title: "NSTimer", description: nil, class_: TimerViewController.self),
             Catalog(title: "UIButton", description: nil, class_: ButtonViewController.self),
             Catalog(title: "UITextField", description: nil, class_: TextFieldViewController.self),
             Catalog(title: "UITextField (Multiple)", description: nil, class_: MultipleTextFieldViewController.self),

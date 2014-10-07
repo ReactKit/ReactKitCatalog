@@ -18,6 +18,8 @@
 		1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EFF9F19DEF3FD0004CD7D /* Images.xcassets */; };
 		1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFA119DEF3FD0004CD7D /* MasterViewController.swift */; };
 		1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */; };
+		1F79711419E41A6E0067A4C4 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79711219E41A6E0067A4C4 /* TimerViewController.swift */; };
+		1F79711519E41A6E0067A4C4 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79711319E41A6E0067A4C4 /* TimerViewController.xib */; };
 		1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A4FC519E29DEF0073250E /* GestureViewController.swift */; };
 		1F7A4FC819E29DEF0073250E /* GestureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7A4FC619E29DEF0073250E /* GestureViewController.xib */; };
 		1F7A4FCE19E2A5350073250E /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A4FCD19E2A5350073250E /* Catalog.swift */; };
@@ -75,6 +77,8 @@
 		1F3EFFA119DEF3FD0004CD7D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		1F3EFFDB19DEFA210004CD7D /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactKit.xcodeproj; sourceTree = "<group>"; };
+		1F79711219E41A6E0067A4C4 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		1F79711319E41A6E0067A4C4 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		1F7A4FC519E29DEF0073250E /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
 		1F7A4FC619E29DEF0073250E /* GestureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GestureViewController.xib; sourceTree = "<group>"; };
 		1F7A4FCD19E2A5350073250E /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 		1F3EFFAA19DEF8320004CD7D /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				1F79711219E41A6E0067A4C4 /* TimerViewController.swift */,
+				1F79711319E41A6E0067A4C4 /* TimerViewController.xib */,
 				486BC52119E3DEDD0094587F /* ButtonViewController.swift */,
 				486BC52219E3DEDD0094587F /* ButtonViewController.xib */,
 				1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */,
@@ -334,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F79711519E41A6E0067A4C4 /* TimerViewController.xib in Resources */,
 				1F3EFFA319DEF3FD0004CD7D /* LaunchScreen.xib in Resources */,
 				486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */,
 				1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */,
@@ -364,6 +371,7 @@
 				486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */,
 				1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */,
 				1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */,
+				1F79711419E41A6E0067A4C4 /* TimerViewController.swift in Sources */,
 				1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */,
 				1F3EFFA219DEF3FD0004CD7D /* AppDelegate.swift in Sources */,
 				1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */,
