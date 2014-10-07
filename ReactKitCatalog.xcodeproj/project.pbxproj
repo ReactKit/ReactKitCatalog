@@ -25,6 +25,8 @@
 		1F7E3BE519DF09C200DFB363 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */; };
 		1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */; };
 		1F89DDB219E2C97F00E89E32 /* MultipleTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */; };
+		486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BC52119E3DEDD0094587F /* ButtonViewController.swift */; };
+		486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486BC52219E3DEDD0094587F /* ButtonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTextFieldViewController.swift; sourceTree = "<group>"; };
 		1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleTextFieldViewController.xib; sourceTree = "<group>"; };
+		486BC52119E3DEDD0094587F /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		486BC52219E3DEDD0094587F /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 		1F3EFFAA19DEF8320004CD7D /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				486BC52119E3DEDD0094587F /* ButtonViewController.swift */,
+				486BC52219E3DEDD0094587F /* ButtonViewController.xib */,
 				1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */,
 				1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */,
 				1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */,
@@ -329,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F3EFFA319DEF3FD0004CD7D /* LaunchScreen.xib in Resources */,
+				486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */,
 				1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */,
 				1F7E3BE019DF04EA00DFB363 /* Main.storyboard in Resources */,
 				1F7A4FC819E29DEF0073250E /* GestureViewController.xib in Resources */,
@@ -354,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7A4FCE19E2A5350073250E /* Catalog.swift in Sources */,
+				486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */,
 				1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */,
 				1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */,
 				1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */,
