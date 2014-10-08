@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarButtonItemViewController" customModule="ReactKitCatalog_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="barButtonItem" destination="oU3-7M-Fnu" id="O9m-Ws-0ex"/>
+                <outlet property="label" destination="bGK-p3-Qyr" id="7BE-LA-aka"/>
+                <outlet property="view" destination="ZWe-bj-1Mn" id="imM-Un-PPc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZWe-bj-1Mn">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Reactive UILabel)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGK-p3-Qyr">
+                    <rect key="frame" x="231" y="185" width="139" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hd-iK-gGu">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" id="oU3-7M-Fnu"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="bGK-p3-Qyr" secondAttribute="centerX" constant="-0.5" id="TC8-aF-UP5"/>
+                <constraint firstAttribute="trailing" secondItem="6Hd-iK-gGu" secondAttribute="trailing" id="WYR-lq-QRh"/>
+                <constraint firstItem="6Hd-iK-gGu" firstAttribute="leading" secondItem="ZWe-bj-1Mn" secondAttribute="leading" id="hIw-oF-XSO"/>
+                <constraint firstAttribute="centerY" secondItem="bGK-p3-Qyr" secondAttribute="centerY" constant="104.5" id="uXA-3e-A24"/>
+                <constraint firstAttribute="bottom" secondItem="6Hd-iK-gGu" secondAttribute="bottom" id="vai-Gx-G0J"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+</document>
