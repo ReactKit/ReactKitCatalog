@@ -46,7 +46,7 @@ class MasterViewController: UITableViewController
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let catalog = self.catalogs[indexPath.row]
-        cell.textLabel?.text = catalog.title
+        cell.textLabel.text = catalog.title
         cell.detailTextLabel?.text = catalog.description
         
         return cell
