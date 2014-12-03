@@ -215,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				1F3E003219DEFA210004CD7D /* ReactKit.framework */,
-				1F3E003419DEFA210004CD7D /* ReactKitTests.xctest */,
+				1F3E003419DEFA210004CD7D /* ReactKit-OSXTests.xctest */,
 				1F3E003619DEFA210004CD7D /* ReactKit.framework */,
 				1F3E003819DEFA210004CD7D /* ReactKit-iOSTests.xctest */,
 			);
@@ -309,10 +309,10 @@
 			remoteRef = 1F3E003119DEFA210004CD7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F3E003419DEFA210004CD7D /* ReactKitTests.xctest */ = {
+		1F3E003419DEFA210004CD7D /* ReactKit-OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = ReactKitTests.xctest;
+			path = "ReactKit-OSXTests.xctest";
 			remoteRef = 1F3E003319DEFA210004CD7D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -504,6 +504,7 @@
 				);
 				INFOPLIST_FILE = "ReactKitCatalog-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -515,6 +516,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "ReactKitCatalog-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
