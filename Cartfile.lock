@@ -1,0 +1,3 @@
+github "ReactKit/SwiftState" "1.1.1"
+github "ReactKit/SwiftTask" "2.2.2"
+github "ReactKit/ReactKit" "0.2.2"

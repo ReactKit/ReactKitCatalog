@@ -1,3 +1,9 @@
-[submodule "Vendor/ReactKit"]
-	path = Vendor/ReactKit
+[submodule "Carthage.checkout/SwiftState"]
+	path = Carthage.checkout/SwiftState
+	url = https://github.com/ReactKit/SwiftState.git
+[submodule "Carthage.checkout/SwiftTask"]
+	path = Carthage.checkout/SwiftTask
+	url = https://github.com/ReactKit/SwiftTask.git
+[submodule "Carthage.checkout/ReactKit"]
+	path = Carthage.checkout/ReactKit
 	url = https://github.com/ReactKit/ReactKit.git
