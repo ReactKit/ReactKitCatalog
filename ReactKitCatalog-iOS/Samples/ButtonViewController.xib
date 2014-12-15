@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6221" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ButtonViewController" customModule="ReactKitCatalog_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="barButtonItem" destination="gvm-4q-aDi" id="mF8-Po-mQz"/>
                 <outlet property="button" destination="nqq-lD-aON" id="iOo-Qa-7of"/>
                 <outlet property="label" destination="8Kf-oL-j9V" id="HDn-q0-RdA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1cT-Cf-uzM"/>
@@ -19,7 +20,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Reactive UILabel)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kf-oL-j9V">
                     <rect key="frame" x="231" y="185" width="139" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqq-lD-aON">
@@ -33,13 +34,22 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jW-pH-jwm">
+                    <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" id="gvm-4q-aDi"/>
+                    </items>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="nqq-lD-aON" firstAttribute="centerX" secondItem="8Kf-oL-j9V" secondAttribute="centerX" constant="-0.5" id="4Kp-qe-jfC"/>
+                <constraint firstAttribute="bottom" secondItem="3jW-pH-jwm" secondAttribute="bottom" id="7AM-v6-FSD"/>
+                <constraint firstItem="3jW-pH-jwm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="GMw-C7-W9U"/>
                 <constraint firstAttribute="centerX" secondItem="8Kf-oL-j9V" secondAttribute="centerX" constant="-0.5" id="KDO-vq-6YT"/>
                 <constraint firstItem="nqq-lD-aON" firstAttribute="top" secondItem="8Kf-oL-j9V" secondAttribute="bottom" constant="19" id="Moz-t6-5fT"/>
                 <constraint firstAttribute="centerY" secondItem="8Kf-oL-j9V" secondAttribute="centerY" constant="104.5" id="aSk-st-bBD"/>
+                <constraint firstAttribute="trailing" secondItem="3jW-pH-jwm" secondAttribute="trailing" id="fe4-8c-88l"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>

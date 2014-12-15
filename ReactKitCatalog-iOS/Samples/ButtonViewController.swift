@@ -13,20 +13,40 @@ class ButtonViewController: UIViewController
 {
     @IBOutlet var label: UILabel!
     @IBOutlet var button: UIButton!
+    @IBOutlet var barButtonItem: UIBarButtonItem!
     
-    var signal: Signal<NSString?>?
+    var buttonSignal: Signal<NSString?>?
+    var barButtonSignal: Signal<NSString?>?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-//        self.signal = self.button?.buttonSignal("OK")
-        self.signal = self.button?.buttonSignal { _ in "\(arc4random_uniform(UInt32.max))" }
+        self._setupButton()
+        self._setupBarButtonItem()
+    }
+    
+    func _setupButton()
+    {
+//        self.buttonSignal = self.button?.buttonSignal("OK")
+        self.buttonSignal = self.button?.buttonSignal { _ in "Button \(arc4random_uniform(UInt32.max))" }
         
         // REACT: button ~> label
-        (self.label, "text") <~ self.signal!
+        (self.label, "text") <~ self.buttonSignal!
         
         // REACT: button ~> println
-        ^{ println($0!) } <~ self.signal!
+        ^{ println($0!) } <~ self.buttonSignal!
+    }
+    
+    func _setupBarButtonItem()
+    {
+//        self.barButtonSignal = self.barButtonItem?.signal("OK")
+        self.barButtonSignal = self.barButtonItem?.signal { _ in "BarButton \(arc4random_uniform(UInt32.max))" }
+        
+        // REACT: button ~> label
+        (self.label, "text") <~ self.barButtonSignal!
+        
+        // REACT: button ~> println
+        ^{ println($0!) } <~ self.barButtonSignal!
     }
 }
