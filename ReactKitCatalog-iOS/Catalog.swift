@@ -17,11 +17,11 @@ struct Catalog
     static func allCatalogs() -> [Catalog]
     {
         return [
-            Catalog(title: "NSTimer", description: nil, class_: TimerViewController.self),
-            Catalog(title: "UIButton/BarButton", description: nil, class_: ButtonViewController.self),
-            Catalog(title: "UITextField", description: nil, class_: TextFieldViewController.self),
-            Catalog(title: "UITextField (Multiple)", description: nil, class_: MultipleTextFieldViewController.self),
-            Catalog(title: "UIGestureRecognizer", description: nil, class_: GestureViewController.self)
+            Catalog(title: "NSTimer", description: "pause()/resume()", class_: TimerViewController.self),
+            Catalog(title: "UIButton/BarButton", description: "Basic", class_: ButtonViewController.self),
+            Catalog(title: "UITextField", description: "throttle()/debounce()", class_: TextFieldViewController.self),
+            Catalog(title: "UITextField (Multiple)", description: "Login example", class_: MultipleTextFieldViewController.self),
+            Catalog(title: "UIGestureRecognizer", description: "Signal.any()", class_: GestureViewController.self)
         ]
     }
 }
