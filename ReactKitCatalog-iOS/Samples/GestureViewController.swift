@@ -38,7 +38,17 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
         
         // anySignal (concatenating above signal-strings)
         let anySignal = Signal.any(self.signals).map { (values: [NSString??], changedValue: NSString?) -> NSString? in
-            return "\n".join(values.map { ($0 ?? "") as String }.filter { !$0.isEmpty })
+            
+            //
+            // WARNING: 2014/12/16
+            //
+            // When release-build, this closure is getting called on MultipleTextFieldViewController's textField input for some reason,
+            // even though this GestureViewController's `viewDidLoad` has never been called.
+            // It seems `Signal.any()` has been treated as sort of singleton object (shared among other viewControllers) on release-build,
+            // which is definitely a Swift compiler's bug because this never happens on debug-build.
+            //
+            
+            return "\n".join(values.map { ($0 ?? "")!! as String }.filter { !$0.isEmpty })
         }
         
         // REACT: anySignal ~> label
