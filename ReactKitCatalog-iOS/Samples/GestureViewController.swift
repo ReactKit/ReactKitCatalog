@@ -38,7 +38,7 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
         
         // anySignal (concatenating above signal-strings)
         let anySignal = Signal.any(self.signals).map { (values: [NSString??], changedValue: NSString?) -> NSString? in
-            return "\n".join(values.map { ($0 ?? "") as String }.filter { !$0.isEmpty })
+            return "\n".join(values.map { ($0 ?? "")!! as String }.filter { !$0.isEmpty })
         }
         
         // REACT: anySignal ~> label
