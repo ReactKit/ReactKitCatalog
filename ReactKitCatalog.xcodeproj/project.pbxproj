@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F1C2CEC1A3D1FD600944BCA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1C2CD81A3D1FA000944BCA /* SwiftState.framework */; };
-		1F1C2CED1A3D1FD600944BCA /* SwiftState.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1C2CD81A3D1FA000944BCA /* SwiftState.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1F1C2CF11A3D1FDA00944BCA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1C2CE71A3D1FA300944BCA /* SwiftTask.framework */; };
-		1F1C2CF21A3D1FDA00944BCA /* SwiftTask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1C2CE71A3D1FA300944BCA /* SwiftTask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1F1C2CF51A3D1FDE00944BCA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1C2CC91A3D1F9D00944BCA /* ReactKit.framework */; };
-		1F1C2CF61A3D1FDE00944BCA /* ReactKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1C2CC91A3D1F9D00944BCA /* ReactKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F3EFF5319DEF3460004CD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFF5219DEF3460004CD7D /* AppDelegate.swift */; };
 		1F3EFF5519DEF3460004CD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFF5419DEF3460004CD7D /* ViewController.swift */; };
 		1F3EFF5719DEF3460004CD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EFF5619DEF3460004CD7D /* Images.xcassets */; };
@@ -31,115 +25,100 @@
 		1F7E3BE519DF09C200DFB363 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */; };
 		1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */; };
 		1F89DDB219E2C97F00E89E32 /* MultipleTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */; };
+		4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556CF1A4CFFB2007770CA /* ReactKit.framework */; };
+		4845571F1A4CFFD5007770CA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484557171A4CFFB2007770CA /* SwiftTask.framework */; };
+		484557201A4CFFD8007770CA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556FF1A4CFFB2007770CA /* SwiftState.framework */; };
+		484557211A4D0004007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556D31A4CFFB2007770CA /* ReactKit.framework */; };
+		484557221A4D0009007770CA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484557171A4CFFB2007770CA /* SwiftTask.framework */; };
+		484557231A4D000C007770CA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556FF1A4CFFB2007770CA /* SwiftState.framework */; };
 		486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BC52119E3DEDD0094587F /* ButtonViewController.swift */; };
 		486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486BC52219E3DEDD0094587F /* ButtonViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1F1C2CC41A3D1F9D00944BCA /* PBXContainerItemProxy */ = {
+		484556CE1A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */;
+			containerPortal = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1FED88F819C1EB120065658B;
 			remoteInfo = "ReactKit-OSX";
 		};
-		1F1C2CC61A3D1F9D00944BCA /* PBXContainerItemProxy */ = {
+		484556D01A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */;
+			containerPortal = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1FED890319C1EB120065658B;
 			remoteInfo = "ReactKit-OSXTests";
 		};
-		1F1C2CC81A3D1F9D00944BCA /* PBXContainerItemProxy */ = {
+		484556D21A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */;
+			containerPortal = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1FED894119C1EB7D0065658B;
 			remoteInfo = "ReactKit-iOS";
 		};
-		1F1C2CCA1A3D1F9D00944BCA /* PBXContainerItemProxy */ = {
+		484556D41A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */;
+			containerPortal = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1FED894B19C1EB7D0065658B;
 			remoteInfo = "ReactKit-iOSTests";
 		};
-		1F1C2CD31A3D1FA000944BCA /* PBXContainerItemProxy */ = {
+		484556FE1A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */;
+			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1FA620001996601000460108;
 			remoteInfo = "SwiftState-OSX";
 		};
-		1F1C2CD51A3D1FA000944BCA /* PBXContainerItemProxy */ = {
+		484557001A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */;
+			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1FA6200B1996601000460108;
 			remoteInfo = "SwiftState-OSXTests";
 		};
-		1F1C2CD71A3D1FA000944BCA /* PBXContainerItemProxy */ = {
+		484557021A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */;
+			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4872D5AC19B4211900F326B5;
 			remoteInfo = "SwiftState-iOS";
 		};
-		1F1C2CD91A3D1FA000944BCA /* PBXContainerItemProxy */ = {
+		484557041A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */;
+			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4822F0A619D0085E00F5F572;
 			remoteInfo = "SwiftState-iOSTests";
 		};
-		1F1C2CE21A3D1FA300944BCA /* PBXContainerItemProxy */ = {
+		484557161A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */;
+			containerPortal = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1F46DED4199EDF1000F97868;
 			remoteInfo = "SwiftTask-OSX";
 		};
-		1F1C2CE41A3D1FA300944BCA /* PBXContainerItemProxy */ = {
+		484557181A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */;
+			containerPortal = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1F46DEDF199EDF1000F97868;
 			remoteInfo = "SwiftTask-OSXTests";
 		};
-		1F1C2CE61A3D1FA300944BCA /* PBXContainerItemProxy */ = {
+		4845571A1A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */;
+			containerPortal = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 48CD5A0C19AEE3570042B9F1;
 			remoteInfo = "SwiftTask-iOS";
 		};
-		1F1C2CE81A3D1FA300944BCA /* PBXContainerItemProxy */ = {
+		4845571C1A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */;
+			containerPortal = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 4822F0D019D00ABF00F5F572;
 			remoteInfo = "SwiftTask-iOSTests";
-		};
-		1F1C2CEE1A3D1FD600944BCA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4872D5AB19B4211900F326B5;
-			remoteInfo = "SwiftState-iOS";
-		};
-		1F1C2CF31A3D1FDA00944BCA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 48CD5A0B19AEE3570042B9F1;
-			remoteInfo = "SwiftTask-iOS";
-		};
-		1F1C2CF71A3D1FDF00944BCA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 1FED894019C1EB7D0065658B;
-			remoteInfo = "ReactKit-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -150,9 +129,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1F1C2CED1A3D1FD600944BCA /* SwiftState.framework in Embed Frameworks */,
-				1F1C2CF61A3D1FDE00944BCA /* ReactKit.framework in Embed Frameworks */,
-				1F1C2CF21A3D1FDA00944BCA /* SwiftTask.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,9 +136,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactKit.xcodeproj; path = ReactKit/ReactKit.xcodeproj; sourceTree = "<group>"; };
-		1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftState.xcodeproj; path = SwiftState/SwiftState.xcodeproj; sourceTree = "<group>"; };
-		1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftTask.xcodeproj; path = SwiftTask/SwiftTask.xcodeproj; sourceTree = "<group>"; };
 		1F3EFF4E19DEF3460004CD7D /* ReactKitCatalog-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactKitCatalog-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3EFF5119DEF3460004CD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F3EFF5219DEF3460004CD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -185,6 +158,9 @@
 		1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTextFieldViewController.swift; sourceTree = "<group>"; };
 		1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleTextFieldViewController.xib; sourceTree = "<group>"; };
+		484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactKit.xcodeproj; sourceTree = "<group>"; };
+		484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftState.xcodeproj; sourceTree = "<group>"; };
+		484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftTask.xcodeproj; sourceTree = "<group>"; };
 		486BC52119E3DEDD0094587F /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		486BC52219E3DEDD0094587F /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,6 +170,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				484557201A4CFFD8007770CA /* SwiftState.framework in Frameworks */,
+				4845571F1A4CFFD5007770CA /* SwiftTask.framework in Frameworks */,
+				4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,62 +180,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F1C2CEC1A3D1FD600944BCA /* SwiftState.framework in Frameworks */,
-				1F1C2CF51A3D1FDE00944BCA /* ReactKit.framework in Frameworks */,
-				1F1C2CF11A3D1FDA00944BCA /* SwiftTask.framework in Frameworks */,
+				484557231A4D000C007770CA /* SwiftState.framework in Frameworks */,
+				484557221A4D0009007770CA /* SwiftTask.framework in Frameworks */,
+				484557211A4D0004007770CA /* ReactKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F1C2A9D1A3D1F9000944BCA /* Carthage.checkout */ = {
-			isa = PBXGroup;
-			children = (
-				1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */,
-				1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */,
-				1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */,
-			);
-			path = Carthage.checkout;
-			sourceTree = "<group>";
-		};
-		1F1C2CBE1A3D1F9D00944BCA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F1C2CC51A3D1F9D00944BCA /* ReactKit.framework */,
-				1F1C2CC71A3D1F9D00944BCA /* ReactKit-OSXTests.xctest */,
-				1F1C2CC91A3D1F9D00944BCA /* ReactKit.framework */,
-				1F1C2CCB1A3D1F9D00944BCA /* ReactKit-iOSTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1F1C2CCD1A3D1F9F00944BCA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F1C2CD41A3D1FA000944BCA /* SwiftState.framework */,
-				1F1C2CD61A3D1FA000944BCA /* SwiftState-OSXTests.xctest */,
-				1F1C2CD81A3D1FA000944BCA /* SwiftState.framework */,
-				1F1C2CDA1A3D1FA000944BCA /* SwiftStateTests-iOS.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1F1C2CDC1A3D1FA300944BCA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1F1C2CE31A3D1FA300944BCA /* SwiftTask.framework */,
-				1F1C2CE51A3D1FA300944BCA /* SwiftTask-OSXTests.xctest */,
-				1F1C2CE71A3D1FA300944BCA /* SwiftTask.framework */,
-				1F1C2CE91A3D1FA300944BCA /* SwiftTask-iOSTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1F3EFED419DEF11B0004CD7D = {
 			isa = PBXGroup;
 			children = (
-				1F1C2A9D1A3D1F9000944BCA /* Carthage.checkout */,
+				484554F81A4CFFB1007770CA /* Checkouts */,
 				1F3EFF4F19DEF3460004CD7D /* ReactKitCatalog-OSX */,
 				1F3EFF9819DEF3FD0004CD7D /* ReactKitCatalog-iOS */,
 				1F3EFEDE19DEF11B0004CD7D /* Products */,
@@ -332,6 +268,74 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
+		484554F81A4CFFB1007770CA /* Checkouts */ = {
+			isa = PBXGroup;
+			children = (
+				484554F91A4CFFB1007770CA /* ReactKit */,
+				484555E91A4CFFB1007770CA /* SwiftState */,
+				4845560F1A4CFFB2007770CA /* SwiftTask */,
+			);
+			name = Checkouts;
+			path = Carthage/Checkouts;
+			sourceTree = "<group>";
+		};
+		484554F91A4CFFB1007770CA /* ReactKit */ = {
+			isa = PBXGroup;
+			children = (
+				484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */,
+			);
+			path = ReactKit;
+			sourceTree = "<group>";
+		};
+		484555DD1A4CFFB1007770CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				484556CF1A4CFFB2007770CA /* ReactKit.framework */,
+				484556D11A4CFFB2007770CA /* ReactKit-OSXTests.xctest */,
+				484556D31A4CFFB2007770CA /* ReactKit.framework */,
+				484556D51A4CFFB2007770CA /* ReactKit-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		484555E91A4CFFB1007770CA /* SwiftState */ = {
+			isa = PBXGroup;
+			children = (
+				484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */,
+			);
+			path = SwiftState;
+			sourceTree = "<group>";
+		};
+		484555FF1A4CFFB1007770CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				484556FF1A4CFFB2007770CA /* SwiftState.framework */,
+				484557011A4CFFB2007770CA /* SwiftState-OSXTests.xctest */,
+				484557031A4CFFB2007770CA /* SwiftState.framework */,
+				484557051A4CFFB2007770CA /* SwiftStateTests-iOS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4845560F1A4CFFB2007770CA /* SwiftTask */ = {
+			isa = PBXGroup;
+			children = (
+				484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */,
+			);
+			path = SwiftTask;
+			sourceTree = "<group>";
+		};
+		484556881A4CFFB2007770CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				484557171A4CFFB2007770CA /* SwiftTask.framework */,
+				484557191A4CFFB2007770CA /* SwiftTask-OSXTests.xctest */,
+				4845571B1A4CFFB2007770CA /* SwiftTask.framework */,
+				4845571D1A4CFFB2007770CA /* SwiftTask-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,9 +368,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				1F1C2CEF1A3D1FD600944BCA /* PBXTargetDependency */,
-				1F1C2CF41A3D1FDA00944BCA /* PBXTargetDependency */,
-				1F1C2CF81A3D1FDF00944BCA /* PBXTargetDependency */,
 			);
 			name = "ReactKitCatalog-iOS";
 			productName = "ReactKitCatalog-iOS";
@@ -404,16 +405,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 1F1C2CBE1A3D1F9D00944BCA /* Products */;
-					ProjectRef = 1F1C2CBD1A3D1F9D00944BCA /* ReactKit.xcodeproj */;
+					ProductGroup = 484555DD1A4CFFB1007770CA /* Products */;
+					ProjectRef = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 1F1C2CCD1A3D1F9F00944BCA /* Products */;
-					ProjectRef = 1F1C2CCC1A3D1F9F00944BCA /* SwiftState.xcodeproj */;
+					ProductGroup = 484555FF1A4CFFB1007770CA /* Products */;
+					ProjectRef = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
 				},
 				{
-					ProductGroup = 1F1C2CDC1A3D1FA300944BCA /* Products */;
-					ProjectRef = 1F1C2CDB1A3D1FA300944BCA /* SwiftTask.xcodeproj */;
+					ProductGroup = 484556881A4CFFB2007770CA /* Products */;
+					ProjectRef = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -425,88 +426,88 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		1F1C2CC51A3D1F9D00944BCA /* ReactKit.framework */ = {
+		484556CF1A4CFFB2007770CA /* ReactKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReactKit.framework;
-			remoteRef = 1F1C2CC41A3D1F9D00944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484556CE1A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CC71A3D1F9D00944BCA /* ReactKit-OSXTests.xctest */ = {
+		484556D11A4CFFB2007770CA /* ReactKit-OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "ReactKit-OSXTests.xctest";
-			remoteRef = 1F1C2CC61A3D1F9D00944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484556D01A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CC91A3D1F9D00944BCA /* ReactKit.framework */ = {
+		484556D31A4CFFB2007770CA /* ReactKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReactKit.framework;
-			remoteRef = 1F1C2CC81A3D1F9D00944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484556D21A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CCB1A3D1F9D00944BCA /* ReactKit-iOSTests.xctest */ = {
+		484556D51A4CFFB2007770CA /* ReactKit-iOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "ReactKit-iOSTests.xctest";
-			remoteRef = 1F1C2CCA1A3D1F9D00944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484556D41A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CD41A3D1FA000944BCA /* SwiftState.framework */ = {
+		484556FF1A4CFFB2007770CA /* SwiftState.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftState.framework;
-			remoteRef = 1F1C2CD31A3D1FA000944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484556FE1A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CD61A3D1FA000944BCA /* SwiftState-OSXTests.xctest */ = {
+		484557011A4CFFB2007770CA /* SwiftState-OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftState-OSXTests.xctest";
-			remoteRef = 1F1C2CD51A3D1FA000944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484557001A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CD81A3D1FA000944BCA /* SwiftState.framework */ = {
+		484557031A4CFFB2007770CA /* SwiftState.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftState.framework;
-			remoteRef = 1F1C2CD71A3D1FA000944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484557021A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CDA1A3D1FA000944BCA /* SwiftStateTests-iOS.xctest */ = {
+		484557051A4CFFB2007770CA /* SwiftStateTests-iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftStateTests-iOS.xctest";
-			remoteRef = 1F1C2CD91A3D1FA000944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484557041A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CE31A3D1FA300944BCA /* SwiftTask.framework */ = {
+		484557171A4CFFB2007770CA /* SwiftTask.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftTask.framework;
-			remoteRef = 1F1C2CE21A3D1FA300944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484557161A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CE51A3D1FA300944BCA /* SwiftTask-OSXTests.xctest */ = {
+		484557191A4CFFB2007770CA /* SwiftTask-OSXTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftTask-OSXTests.xctest";
-			remoteRef = 1F1C2CE41A3D1FA300944BCA /* PBXContainerItemProxy */;
+			remoteRef = 484557181A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CE71A3D1FA300944BCA /* SwiftTask.framework */ = {
+		4845571B1A4CFFB2007770CA /* SwiftTask.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = SwiftTask.framework;
-			remoteRef = 1F1C2CE61A3D1FA300944BCA /* PBXContainerItemProxy */;
+			remoteRef = 4845571A1A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1F1C2CE91A3D1FA300944BCA /* SwiftTask-iOSTests.xctest */ = {
+		4845571D1A4CFFB2007770CA /* SwiftTask-iOSTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "SwiftTask-iOSTests.xctest";
-			remoteRef = 1F1C2CE81A3D1FA300944BCA /* PBXContainerItemProxy */;
+			remoteRef = 4845571C1A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -564,24 +565,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1F1C2CEF1A3D1FD600944BCA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SwiftState-iOS";
-			targetProxy = 1F1C2CEE1A3D1FD600944BCA /* PBXContainerItemProxy */;
-		};
-		1F1C2CF41A3D1FDA00944BCA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "SwiftTask-iOS";
-			targetProxy = 1F1C2CF31A3D1FDA00944BCA /* PBXContainerItemProxy */;
-		};
-		1F1C2CF81A3D1FDF00944BCA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactKit-iOS";
-			targetProxy = 1F1C2CF71A3D1FDF00944BCA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1F3EFF5819DEF3460004CD7D /* Main.storyboard */ = {
