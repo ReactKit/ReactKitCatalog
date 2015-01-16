@@ -56,10 +56,10 @@ class MultipleTextFieldViewController: UIViewController
         let passwordTextSignal = self.passwordTextField.textChangedSignal()
         let password2TextSignal = self.password2TextField.textChangedSignal()
         
-        let anyTextSignal = Signal.any([usernameTextSignal, emailTextSignal, passwordTextSignal, password2TextSignal])
+        let combinedTextSignal = Signal<NSString?>.merge2([usernameTextSignal, emailTextSignal, passwordTextSignal, password2TextSignal])
         
         // create button-enabling signal via any textField change
-        self.buttonEnablingSignal = anyTextSignal.map { (values, changedValue) -> NSNumber? in
+        self.buttonEnablingSignal = combinedTextSignal.map { (values, changedValue) -> NSNumber? in
             
             let username: NSString? = values[0]?
             let email: NSString? = values[1]?
@@ -77,7 +77,7 @@ class MultipleTextFieldViewController: UIViewController
         }
         
         // create error-messaging signal via any textField change
-        self.errorMessagingSignal = anyTextSignal.map { (values, changedValue) -> NSString? in
+        self.errorMessagingSignal = combinedTextSignal.map { (values, changedValue) -> NSString? in
             
             let username: NSString? = values[0]?
             let email: NSString? = values[1]?

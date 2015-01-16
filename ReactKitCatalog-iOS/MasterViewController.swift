@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Dollar
 
 class MasterViewController: UITableViewController
 {
@@ -25,6 +26,11 @@ class MasterViewController: UITableViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        // auto-select
+        if let index = $.findIndex(self.catalogs, { $0.selected }) {
+            self.showDetailViewControllerAtIndex(index)
+        }
     }
     
     //--------------------------------------------------

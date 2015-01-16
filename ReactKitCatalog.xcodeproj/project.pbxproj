@@ -16,6 +16,7 @@
 		1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EFF9F19DEF3FD0004CD7D /* Images.xcassets */; };
 		1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFA119DEF3FD0004CD7D /* MasterViewController.swift */; };
 		1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */; };
+		1F65D82E1A5ACF0C0096093D /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; };
 		1F79711419E41A6E0067A4C4 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79711219E41A6E0067A4C4 /* TimerViewController.swift */; };
 		1F79711519E41A6E0067A4C4 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79711319E41A6E0067A4C4 /* TimerViewController.xib */; };
 		1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A4FC519E29DEF0073250E /* GestureViewController.swift */; };
@@ -25,6 +26,11 @@
 		1F7E3BE519DF09C200DFB363 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */; };
 		1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */; };
 		1F89DDB219E2C97F00E89E32 /* MultipleTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */; };
+		1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */; };
+		1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */; };
+		1FCC65271A5AC48F00DBC837 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65121A5AC44D00DBC837 /* Alamofire.framework */; };
+		1FCC65281A5AC49500DBC837 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65201A5AC44D00DBC837 /* SwiftyJSON.framework */; };
+		1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC652C1A5AC83500DBC837 /* Async.swift */; };
 		4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556CF1A4CFFB2007770CA /* ReactKit.framework */; };
 		4845571F1A4CFFD5007770CA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484557171A4CFFB2007770CA /* SwiftTask.framework */; };
 		484557201A4CFFD8007770CA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556FF1A4CFFB2007770CA /* SwiftState.framework */; };
@@ -33,9 +39,66 @@
 		484557231A4D000C007770CA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556FF1A4CFFB2007770CA /* SwiftState.framework */; };
 		486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BC52119E3DEDD0094587F /* ButtonViewController.swift */; };
 		486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486BC52219E3DEDD0094587F /* ButtonViewController.xib */; };
+		48DA22761A5CAAA000384E6C /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1FCC65111A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		1FCC65131A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		1FCC651F1A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = SwiftyJSON;
+		};
+		1FCC65211A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = SwiftyJSONTests;
+		};
+		1FCC65231A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EC1C1C91A0C1A2D0026ED0B;
+			remoteInfo = SwiftyJSONOSX;
+		};
+		1FCC65251A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4EC1C1D31A0C1A2D0026ED0B;
+			remoteInfo = SwiftyJSONOSXTests;
+		};
+		1FCC65BE1A5ACDAB00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92E0D03C19467C67002ACC3D;
+			remoteInfo = Dollar;
+		};
+		1FCC65C01A5ACDAB00DBC837 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 92E6686F19F09C6400BB4FB8;
+			remoteInfo = DollarTests;
+		};
 		484556CE1A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
@@ -120,6 +183,27 @@
 			remoteGlobalIDString = 4822F0D019D00ABF00F5F572;
 			remoteInfo = "SwiftTask-iOSTests";
 		};
+		48DA22611A5CAA8B00384E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9561980418C00CD0F4C;
+			remoteInfo = Haneke;
+		};
+		48DA22631A5CAA8B00384E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A095C9611980418C00CD0F4C;
+			remoteInfo = HanekeTests;
+		};
+		48DA22651A5CAA8B00384E6C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A0026E9A19C9BFBC004DE0C6;
+			remoteInfo = HanekeDemo;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -158,11 +242,18 @@
 		1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTextFieldViewController.swift; sourceTree = "<group>"; };
 		1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleTextFieldViewController.xib; sourceTree = "<group>"; };
+		1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoToFollowViewController.swift; sourceTree = "<group>"; };
+		1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoToFollowViewController.xib; sourceTree = "<group>"; };
+		1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
+		1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		1FCC652C1A5AC83500DBC837 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Dollar.xcodeproj; sourceTree = "<group>"; };
 		484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactKit.xcodeproj; sourceTree = "<group>"; };
 		484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftState.xcodeproj; sourceTree = "<group>"; };
 		484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftTask.xcodeproj; sourceTree = "<group>"; };
 		486BC52119E3DEDD0094587F /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		486BC52219E3DEDD0094587F /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
+		48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Haneke.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +271,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48DA22761A5CAAA000384E6C /* Haneke.framework in Frameworks */,
+				1F65D82E1A5ACF0C0096093D /* Dollar.framework in Frameworks */,
+				1FCC65281A5AC49500DBC837 /* SwiftyJSON.framework in Frameworks */,
+				1FCC65271A5AC48F00DBC837 /* Alamofire.framework in Frameworks */,
 				484557231A4D000C007770CA /* SwiftState.framework in Frameworks */,
 				484557221A4D0009007770CA /* SwiftTask.framework in Frameworks */,
 				484557211A4D0004007770CA /* ReactKit.framework in Frameworks */,
@@ -264,8 +359,79 @@
 				1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */,
 				1F7A4FC519E29DEF0073250E /* GestureViewController.swift */,
 				1F7A4FC619E29DEF0073250E /* GestureViewController.xib */,
+				1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */,
+				1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */,
 			);
 			path = Samples;
+			sourceTree = "<group>";
+		};
+		1FCC64871A5AC44D00DBC837 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		1FCC648C1A5AC44D00DBC837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC65121A5AC44D00DBC837 /* Alamofire.framework */,
+				1FCC65141A5AC44D00DBC837 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FCC64AE1A5AC44D00DBC837 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		1FCC64C81A5AC44D00DBC837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC65201A5AC44D00DBC837 /* SwiftyJSON.framework */,
+				1FCC65221A5AC44D00DBC837 /* SwiftyJSONTests.xctest */,
+				1FCC65241A5AC44D00DBC837 /* SwiftyJSON.framework */,
+				1FCC65261A5AC44D00DBC837 /* SwiftyJSONOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FCC65291A5AC83500DBC837 /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC652C1A5AC83500DBC837 /* Async.swift */,
+			);
+			path = Async;
+			sourceTree = "<group>";
+		};
+		1FCC656A1A5ACDAA00DBC837 /* Dollar.swift */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC65861A5ACDAA00DBC837 /* Dollar */,
+			);
+			path = Dollar.swift;
+			sourceTree = "<group>";
+		};
+		1FCC65861A5ACDAA00DBC837 /* Dollar */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */,
+			);
+			path = Dollar;
+			sourceTree = "<group>";
+		};
+		1FCC658E1A5ACDAA00DBC837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */,
+				1FCC65C11A5ACDAB00DBC837 /* DollarTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		484554F81A4CFFB1007770CA /* Checkouts */ = {
@@ -274,6 +440,11 @@
 				484554F91A4CFFB1007770CA /* ReactKit */,
 				484555E91A4CFFB1007770CA /* SwiftState */,
 				4845560F1A4CFFB2007770CA /* SwiftTask */,
+				1FCC64871A5AC44D00DBC837 /* Alamofire */,
+				1FCC64AE1A5AC44D00DBC837 /* SwiftyJSON */,
+				1FCC65291A5AC83500DBC837 /* Async */,
+				1FCC656A1A5ACDAA00DBC837 /* Dollar.swift */,
+				48DA20A51A5CAA8A00384E6C /* HanekeSwift */,
 			);
 			name = Checkouts;
 			path = Carthage/Checkouts;
@@ -332,6 +503,24 @@
 				484557191A4CFFB2007770CA /* SwiftTask-OSXTests.xctest */,
 				4845571B1A4CFFB2007770CA /* SwiftTask.framework */,
 				4845571D1A4CFFB2007770CA /* SwiftTask-iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48DA20A51A5CAA8A00384E6C /* HanekeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */,
+			);
+			path = HanekeSwift;
+			sourceTree = "<group>";
+		};
+		48DA20C11A5CAA8A00384E6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48DA22621A5CAA8B00384E6C /* Haneke.framework */,
+				48DA22641A5CAA8B00384E6C /* HanekeTests.xctest */,
+				48DA22661A5CAA8B00384E6C /* HanekeDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -405,6 +594,18 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 1FCC648C1A5AC44D00DBC837 /* Products */;
+					ProjectRef = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 1FCC658E1A5ACDAA00DBC837 /* Products */;
+					ProjectRef = 1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */;
+				},
+				{
+					ProductGroup = 48DA20C11A5CAA8A00384E6C /* Products */;
+					ProjectRef = 48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */;
+				},
+				{
 					ProductGroup = 484555DD1A4CFFB1007770CA /* Products */;
 					ProjectRef = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 				},
@@ -416,6 +617,10 @@
 					ProductGroup = 484556881A4CFFB2007770CA /* Products */;
 					ProjectRef = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 				},
+				{
+					ProductGroup = 1FCC64C81A5AC44D00DBC837 /* Products */;
+					ProjectRef = 1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -426,6 +631,62 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1FCC65121A5AC44D00DBC837 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 1FCC65111A5AC44D00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65141A5AC44D00DBC837 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = 1FCC65131A5AC44D00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65201A5AC44D00DBC837 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 1FCC651F1A5AC44D00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65221A5AC44D00DBC837 /* SwiftyJSONTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftyJSONTests.xctest;
+			remoteRef = 1FCC65211A5AC44D00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65241A5AC44D00DBC837 /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = 1FCC65231A5AC44D00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65261A5AC44D00DBC837 /* SwiftyJSONOSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SwiftyJSONOSXTests.xctest;
+			remoteRef = 1FCC65251A5AC44D00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Dollar.framework;
+			remoteRef = 1FCC65BE1A5ACDAB00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC65C11A5ACDAB00DBC837 /* DollarTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DollarTests.xctest;
+			remoteRef = 1FCC65C01A5ACDAB00DBC837 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		484556CF1A4CFFB2007770CA /* ReactKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -510,6 +771,27 @@
 			remoteRef = 4845571C1A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		48DA22621A5CAA8B00384E6C /* Haneke.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Haneke.framework;
+			remoteRef = 48DA22611A5CAA8B00384E6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		48DA22641A5CAA8B00384E6C /* HanekeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HanekeTests.xctest;
+			remoteRef = 48DA22631A5CAA8B00384E6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		48DA22661A5CAA8B00384E6C /* HanekeDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = HanekeDemo.app;
+			remoteRef = 48DA22651A5CAA8B00384E6C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -530,6 +812,7 @@
 				1F3EFFA319DEF3FD0004CD7D /* LaunchScreen.xib in Resources */,
 				486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */,
 				1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */,
+				1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */,
 				1F7E3BE019DF04EA00DFB363 /* Main.storyboard in Resources */,
 				1F7A4FC819E29DEF0073250E /* GestureViewController.xib in Resources */,
 				1F89DDB219E2C97F00E89E32 /* MultipleTextFieldViewController.xib in Resources */,
@@ -558,8 +841,10 @@
 				1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */,
 				1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */,
 				1F79711419E41A6E0067A4C4 /* TimerViewController.swift in Sources */,
+				1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */,
 				1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */,
 				1F3EFFA219DEF3FD0004CD7D /* AppDelegate.swift in Sources */,
+				1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */,
 				1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
