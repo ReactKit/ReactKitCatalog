@@ -41,27 +41,26 @@ class WhoToFollowViewController: UIViewController {
     {
         let refreshButtonSignal: Signal<NSString?> = self.refreshButton!.buttonSignal("refresh")
         
-        // NOTE: explicitly cast as `Signal<Any>` for combining with variety of signal types
-        let user1ButtonSignal: Signal<Any> = self.user1Button!.buttonSignal(1)
-        let user2ButtonSignal: Signal<Any> = self.user2Button!.buttonSignal(2)
-        let user3ButtonSignal: Signal<Any> = self.user3Button!.buttonSignal(3)
+        let user1ButtonSignal = self.user1Button!.buttonSignal(1)
+        let user2ButtonSignal = self.user2Button!.buttonSignal(2)
+        let user3ButtonSignal = self.user3Button!.buttonSignal(3)
         
         /// refreshButton -> random URL -> get JSON
-        let jsonSignal: Signal<Any> = refreshButtonSignal
+        let jsonSignal = refreshButtonSignal
             .startWith("refresh on start")
             .map { _ -> Alamofire.Request in
                 let since = Int(arc4random_uniform(500))
                 return Alamofire.request(.GET, "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
             }
             .flatMap { [weak self] in Signal<SwiftyJSON.JSON>.fromTask(self!._requestTask($0)) }
-            .asSignal(Any)  // convert from `Signal<JSON>` to `Signal<Any>` for combining
         
         typealias UserDict = [String : AnyObject]
         
-        func createRandomUserSignal(userButtonSignal: Signal<Any>) -> Signal<UserDict?>
+        func createRandomUserSignal(userButtonSignal: Signal<Int>) -> Signal<UserDict?>
         {
             // `Signal.merge2()` a.k.a `Rx.combineLatest()`
-            return Signal<Any>.merge2([userButtonSignal.startWith("clear"), jsonSignal])
+            // NOTE: use `asSignal(Any)` whenever combining with different Signal types
+            return Signal<Any>.merge2([userButtonSignal.asSignal(Any).startWith("clear"), jsonSignal.asSignal(Any)])
                 .map { values, changedValue -> UserDict? in
                     
                     if let json = values.last as? SwiftyJSON.JSON {
