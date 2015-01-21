@@ -16,7 +16,6 @@
 		1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EFF9F19DEF3FD0004CD7D /* Images.xcassets */; };
 		1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFA119DEF3FD0004CD7D /* MasterViewController.swift */; };
 		1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */; };
-		1F65D82E1A5ACF0C0096093D /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; };
 		1F79711419E41A6E0067A4C4 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79711219E41A6E0067A4C4 /* TimerViewController.swift */; };
 		1F79711519E41A6E0067A4C4 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79711319E41A6E0067A4C4 /* TimerViewController.xib */; };
 		1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A4FC519E29DEF0073250E /* GestureViewController.swift */; };
@@ -26,23 +25,77 @@
 		1F7E3BE519DF09C200DFB363 /* TextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */; };
 		1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */; };
 		1F89DDB219E2C97F00E89E32 /* MultipleTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */; };
+		1FA369A41A6FEC3F008F2F38 /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556D31A4CFFB2007770CA /* ReactKit.framework */; };
+		1FA369A51A6FEC3F008F2F38 /* ReactKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 484556D31A4CFFB2007770CA /* ReactKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FA369A81A6FEC44008F2F38 /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4845571B1A4CFFB2007770CA /* SwiftTask.framework */; };
+		1FA369A91A6FEC44008F2F38 /* SwiftTask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4845571B1A4CFFB2007770CA /* SwiftTask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FA369AC1A6FEC49008F2F38 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65121A5AC44D00DBC837 /* Alamofire.framework */; };
+		1FA369AD1A6FEC49008F2F38 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65121A5AC44D00DBC837 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FA369B01A6FEC4F008F2F38 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65201A5AC44D00DBC837 /* SwiftyJSON.framework */; };
+		1FA369B11A6FEC4F008F2F38 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65201A5AC44D00DBC837 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FA369B41A6FEC56008F2F38 /* Dollar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; };
+		1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FA369B81A6FEC5C008F2F38 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; };
+		1FA369B91A6FEC5C008F2F38 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */; };
 		1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */; };
-		1FCC65271A5AC48F00DBC837 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65121A5AC44D00DBC837 /* Alamofire.framework */; };
-		1FCC65281A5AC49500DBC837 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65201A5AC44D00DBC837 /* SwiftyJSON.framework */; };
 		1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC652C1A5AC83500DBC837 /* Async.swift */; };
 		4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556CF1A4CFFB2007770CA /* ReactKit.framework */; };
 		4845571F1A4CFFD5007770CA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484557171A4CFFB2007770CA /* SwiftTask.framework */; };
-		484557201A4CFFD8007770CA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556FF1A4CFFB2007770CA /* SwiftState.framework */; };
-		484557211A4D0004007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556D31A4CFFB2007770CA /* ReactKit.framework */; };
-		484557221A4D0009007770CA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484557171A4CFFB2007770CA /* SwiftTask.framework */; };
-		484557231A4D000C007770CA /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556FF1A4CFFB2007770CA /* SwiftState.framework */; };
 		486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BC52119E3DEDD0094587F /* ButtonViewController.swift */; };
 		486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486BC52219E3DEDD0094587F /* ButtonViewController.xib */; };
-		48DA22761A5CAAA000384E6C /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1FA369911A6FEB35008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		1FA369A61A6FEC3F008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FED894019C1EB7D0065658B;
+			remoteInfo = "ReactKit-iOS";
+		};
+		1FA369AA1A6FEC44008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 48CD5A0B19AEE3570042B9F1;
+			remoteInfo = "SwiftTask-iOS";
+		};
+		1FA369AE1A6FEC49008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		1FA369B21A6FEC4F008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E4FEFDA19575BE100351305;
+			remoteInfo = SwiftyJSON;
+		};
+		1FA369B61A6FEC56008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 92E0D03B19467C67002ACC3D;
+			remoteInfo = Dollar;
+		};
+		1FA369BA1A6FEC5C008F2F38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A095C9551980418C00CD0F4C;
+			remoteInfo = Haneke;
+		};
 		1FCC65111A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
@@ -127,34 +180,6 @@
 			remoteGlobalIDString = 1FED894B19C1EB7D0065658B;
 			remoteInfo = "ReactKit-iOSTests";
 		};
-		484556FE1A4CFFB2007770CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1FA620001996601000460108;
-			remoteInfo = "SwiftState-OSX";
-		};
-		484557001A4CFFB2007770CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1FA6200B1996601000460108;
-			remoteInfo = "SwiftState-OSXTests";
-		};
-		484557021A4CFFB2007770CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4872D5AC19B4211900F326B5;
-			remoteInfo = "SwiftState-iOS";
-		};
-		484557041A4CFFB2007770CA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4822F0A619D0085E00F5F572;
-			remoteInfo = "SwiftState-iOSTests";
-		};
 		484557161A4CFFB2007770CA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
@@ -213,6 +238,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1FA369B11A6FEC4F008F2F38 /* SwiftyJSON.framework in Embed Frameworks */,
+				1FA369A51A6FEC3F008F2F38 /* ReactKit.framework in Embed Frameworks */,
+				1FA369B91A6FEC5C008F2F38 /* Haneke.framework in Embed Frameworks */,
+				1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */,
+				1FA369AD1A6FEC49008F2F38 /* Alamofire.framework in Embed Frameworks */,
+				1FA369A91A6FEC44008F2F38 /* SwiftTask.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,7 +280,6 @@
 		1FCC652C1A5AC83500DBC837 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Dollar.xcodeproj; sourceTree = "<group>"; };
 		484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactKit.xcodeproj; sourceTree = "<group>"; };
-		484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftState.xcodeproj; sourceTree = "<group>"; };
 		484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftTask.xcodeproj; sourceTree = "<group>"; };
 		486BC52119E3DEDD0094587F /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		486BC52219E3DEDD0094587F /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
@@ -261,7 +291,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				484557201A4CFFD8007770CA /* SwiftState.framework in Frameworks */,
 				4845571F1A4CFFD5007770CA /* SwiftTask.framework in Frameworks */,
 				4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */,
 			);
@@ -271,13 +300,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48DA22761A5CAAA000384E6C /* Haneke.framework in Frameworks */,
-				1F65D82E1A5ACF0C0096093D /* Dollar.framework in Frameworks */,
-				1FCC65281A5AC49500DBC837 /* SwiftyJSON.framework in Frameworks */,
-				1FCC65271A5AC48F00DBC837 /* Alamofire.framework in Frameworks */,
-				484557231A4D000C007770CA /* SwiftState.framework in Frameworks */,
-				484557221A4D0009007770CA /* SwiftTask.framework in Frameworks */,
-				484557211A4D0004007770CA /* ReactKit.framework in Frameworks */,
+				1FA369B01A6FEC4F008F2F38 /* SwiftyJSON.framework in Frameworks */,
+				1FA369A41A6FEC3F008F2F38 /* ReactKit.framework in Frameworks */,
+				1FA369B81A6FEC5C008F2F38 /* Haneke.framework in Frameworks */,
+				1FA369B41A6FEC56008F2F38 /* Dollar.framework in Frameworks */,
+				1FA369AC1A6FEC49008F2F38 /* Alamofire.framework in Frameworks */,
+				1FA369A81A6FEC44008F2F38 /* SwiftTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +405,7 @@
 			isa = PBXGroup;
 			children = (
 				1FCC65121A5AC44D00DBC837 /* Alamofire.framework */,
+				1FA369921A6FEB35008F2F38 /* Alamofire.framework */,
 				1FCC65141A5AC44D00DBC837 /* AlamofireTests.xctest */,
 			);
 			name = Products;
@@ -438,7 +467,6 @@
 			isa = PBXGroup;
 			children = (
 				484554F91A4CFFB1007770CA /* ReactKit */,
-				484555E91A4CFFB1007770CA /* SwiftState */,
 				4845560F1A4CFFB2007770CA /* SwiftTask */,
 				1FCC64871A5AC44D00DBC837 /* Alamofire */,
 				1FCC64AE1A5AC44D00DBC837 /* SwiftyJSON */,
@@ -465,25 +493,6 @@
 				484556D11A4CFFB2007770CA /* ReactKit-OSXTests.xctest */,
 				484556D31A4CFFB2007770CA /* ReactKit.framework */,
 				484556D51A4CFFB2007770CA /* ReactKit-iOSTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		484555E91A4CFFB1007770CA /* SwiftState */ = {
-			isa = PBXGroup;
-			children = (
-				484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */,
-			);
-			path = SwiftState;
-			sourceTree = "<group>";
-		};
-		484555FF1A4CFFB1007770CA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				484556FF1A4CFFB2007770CA /* SwiftState.framework */,
-				484557011A4CFFB2007770CA /* SwiftState-OSXTests.xctest */,
-				484557031A4CFFB2007770CA /* SwiftState.framework */,
-				484557051A4CFFB2007770CA /* SwiftStateTests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -557,6 +566,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				1FA369A71A6FEC3F008F2F38 /* PBXTargetDependency */,
+				1FA369AB1A6FEC44008F2F38 /* PBXTargetDependency */,
+				1FA369AF1A6FEC49008F2F38 /* PBXTargetDependency */,
+				1FA369B31A6FEC4F008F2F38 /* PBXTargetDependency */,
+				1FA369B71A6FEC56008F2F38 /* PBXTargetDependency */,
+				1FA369BB1A6FEC5C008F2F38 /* PBXTargetDependency */,
 			);
 			name = "ReactKitCatalog-iOS";
 			productName = "ReactKitCatalog-iOS";
@@ -610,10 +625,6 @@
 					ProjectRef = 484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 484555FF1A4CFFB1007770CA /* Products */;
-					ProjectRef = 484555FE1A4CFFB1007770CA /* SwiftState.xcodeproj */;
-				},
-				{
 					ProductGroup = 484556881A4CFFB2007770CA /* Products */;
 					ProjectRef = 484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */;
 				},
@@ -631,6 +642,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1FA369921A6FEB35008F2F38 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 1FA369911A6FEB35008F2F38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1FCC65121A5AC44D00DBC837 /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -713,34 +731,6 @@
 			fileType = wrapper.cfbundle;
 			path = "ReactKit-iOSTests.xctest";
 			remoteRef = 484556D41A4CFFB2007770CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		484556FF1A4CFFB2007770CA /* SwiftState.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftState.framework;
-			remoteRef = 484556FE1A4CFFB2007770CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		484557011A4CFFB2007770CA /* SwiftState-OSXTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SwiftState-OSXTests.xctest";
-			remoteRef = 484557001A4CFFB2007770CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		484557031A4CFFB2007770CA /* SwiftState.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftState.framework;
-			remoteRef = 484557021A4CFFB2007770CA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		484557051A4CFFB2007770CA /* SwiftStateTests-iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "SwiftStateTests-iOS.xctest";
-			remoteRef = 484557041A4CFFB2007770CA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		484557171A4CFFB2007770CA /* SwiftTask.framework */ = {
@@ -850,6 +840,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FA369A71A6FEC3F008F2F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactKit-iOS";
+			targetProxy = 1FA369A61A6FEC3F008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FA369AB1A6FEC44008F2F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftTask-iOS";
+			targetProxy = 1FA369AA1A6FEC44008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FA369AF1A6FEC49008F2F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = 1FA369AE1A6FEC49008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FA369B31A6FEC4F008F2F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			targetProxy = 1FA369B21A6FEC4F008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FA369B71A6FEC56008F2F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Dollar;
+			targetProxy = 1FA369B61A6FEC56008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FA369BB1A6FEC5C008F2F38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Haneke;
+			targetProxy = 1FA369BA1A6FEC5C008F2F38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1F3EFF5819DEF3460004CD7D /* Main.storyboard */ = {
