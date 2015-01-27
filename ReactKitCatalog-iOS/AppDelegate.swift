@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import BigBrother
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -27,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+        // setup BigBrother (networkActivityIndicator)
+        BigBrother.addToSharedSession()
+        BigBrother.addToSessionConfiguration(Alamofire.Manager.sharedInstance.session.configuration)
+        
         self._setupAppearance()
         
         let splitVC = self.window!.rootViewController as UISplitViewController

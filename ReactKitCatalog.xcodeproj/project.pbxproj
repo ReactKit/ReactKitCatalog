@@ -37,6 +37,8 @@
 		1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FA369B81A6FEC5C008F2F38 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; };
 		1FA369B91A6FEC5C008F2F38 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FCC3FC51A77D7B200303043 /* BigBrother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC3FB61A77D77E00303043 /* BigBrother.framework */; };
+		1FCC3FC61A77D7B200303043 /* BigBrother.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC3FB61A77D77E00303043 /* BigBrother.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */; };
 		1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */; };
 		1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC652C1A5AC83500DBC837 /* Async.swift */; };
@@ -95,6 +97,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = A095C9551980418C00CD0F4C;
 			remoteInfo = Haneke;
+		};
+		1FCC3FB51A77D77E00303043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D49921691A5612D800B38954;
+			remoteInfo = BigBrother;
+		};
+		1FCC3FB71A77D77E00303043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D49921741A5612D800B38954;
+			remoteInfo = BigBrotherTests;
+		};
+		1FCC3FC71A77D7B200303043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D49921681A5612D800B38954;
+			remoteInfo = BigBrother;
 		};
 		1FCC65111A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -244,6 +267,7 @@
 				1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */,
 				1FA369AD1A6FEC49008F2F38 /* Alamofire.framework in Embed Frameworks */,
 				1FA369A91A6FEC44008F2F38 /* SwiftTask.framework in Embed Frameworks */,
+				1FCC3FC61A77D7B200303043 /* BigBrother.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +297,7 @@
 		1F7E3BE419DF09C200DFB363 /* TextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextFieldViewController.xib; sourceTree = "<group>"; };
 		1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTextFieldViewController.swift; sourceTree = "<group>"; };
 		1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleTextFieldViewController.xib; sourceTree = "<group>"; };
+		1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BigBrother.xcodeproj; sourceTree = "<group>"; };
 		1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoToFollowViewController.swift; sourceTree = "<group>"; };
 		1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoToFollowViewController.xib; sourceTree = "<group>"; };
 		1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -306,6 +331,7 @@
 				1FA369B41A6FEC56008F2F38 /* Dollar.framework in Frameworks */,
 				1FA369AC1A6FEC49008F2F38 /* Alamofire.framework in Frameworks */,
 				1FA369A81A6FEC44008F2F38 /* SwiftTask.framework in Frameworks */,
+				1FCC3FC51A77D7B200303043 /* BigBrother.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +419,23 @@
 			path = Samples;
 			sourceTree = "<group>";
 		};
+		1FCC3F941A77D77E00303043 /* BigBrother */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */,
+			);
+			path = BigBrother;
+			sourceTree = "<group>";
+		};
+		1FCC3F9E1A77D77E00303043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FCC3FB61A77D77E00303043 /* BigBrother.framework */,
+				1FCC3FB81A77D77E00303043 /* BigBrotherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1FCC64871A5AC44D00DBC837 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -473,6 +516,7 @@
 				1FCC65291A5AC83500DBC837 /* Async */,
 				1FCC656A1A5ACDAA00DBC837 /* Dollar.swift */,
 				48DA20A51A5CAA8A00384E6C /* HanekeSwift */,
+				1FCC3F941A77D77E00303043 /* BigBrother */,
 			);
 			name = Checkouts;
 			path = Carthage/Checkouts;
@@ -572,6 +616,7 @@
 				1FA369B31A6FEC4F008F2F38 /* PBXTargetDependency */,
 				1FA369B71A6FEC56008F2F38 /* PBXTargetDependency */,
 				1FA369BB1A6FEC5C008F2F38 /* PBXTargetDependency */,
+				1FCC3FC81A77D7B200303043 /* PBXTargetDependency */,
 			);
 			name = "ReactKitCatalog-iOS";
 			productName = "ReactKitCatalog-iOS";
@@ -613,6 +658,10 @@
 					ProjectRef = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
 				},
 				{
+					ProductGroup = 1FCC3F9E1A77D77E00303043 /* Products */;
+					ProjectRef = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
+				},
+				{
 					ProductGroup = 1FCC658E1A5ACDAA00DBC837 /* Products */;
 					ProjectRef = 1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */;
 				},
@@ -647,6 +696,20 @@
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
 			remoteRef = 1FA369911A6FEB35008F2F38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC3FB61A77D77E00303043 /* BigBrother.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BigBrother.framework;
+			remoteRef = 1FCC3FB51A77D77E00303043 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FCC3FB81A77D77E00303043 /* BigBrotherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BigBrotherTests.xctest;
+			remoteRef = 1FCC3FB71A77D77E00303043 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1FCC65121A5AC44D00DBC837 /* Alamofire.framework */ = {
@@ -871,6 +934,11 @@
 			isa = PBXTargetDependency;
 			name = Haneke;
 			targetProxy = 1FA369BA1A6FEC5C008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FCC3FC81A77D7B200303043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BigBrother;
+			targetProxy = 1FCC3FC71A77D7B200303043 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

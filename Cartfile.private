@@ -4,3 +4,4 @@ github "SwiftyJSON/SwiftyJSON" ~> 2.1.2
 github "duemunk/Async" ~> 1.1.1
 github "ankurp/Dollar.swift" ~> 2.1.0
 github "Haneke/HanekeSwift" ~> 0.8.1
+github "marcelofabri/BigBrother" ~> 0.1.0

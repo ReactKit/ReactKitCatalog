@@ -19,3 +19,6 @@
 [submodule "Carthage/Checkouts/HanekeSwift"]
 	path = Carthage/Checkouts/HanekeSwift
 	url = https://github.com/Haneke/HanekeSwift.git
+[submodule "Carthage/Checkouts/BigBrother"]
+	path = Carthage/Checkouts/BigBrother
+	url = https://github.com/marcelofabri/BigBrother.git
