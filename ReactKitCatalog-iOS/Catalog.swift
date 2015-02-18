@@ -23,7 +23,8 @@ struct Catalog
             Catalog(title: "UITextField", description: "throttle()/debounce()", class_: TextFieldViewController.self),
             Catalog(title: "UITextField (Multiple)", description: "Login example", class_: MultipleTextFieldViewController.self),
             Catalog(title: "UIGestureRecognizer", description: "Signal.merge2()", class_: GestureViewController.self),
-            Catalog(title: "Who To Follow", description: "Suggestion box", class_: WhoToFollowViewController.self, selected: true)
+            Catalog(title: "Who To Follow", description: "Suggestion box", class_: WhoToFollowViewController.self, selected: false),
+            Catalog(title: "Calculator", description: "Mimics iOS Calculator.app", class_: CalculatorViewController.self, selected: true)
         ]
     }
     
