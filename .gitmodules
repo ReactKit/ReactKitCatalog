@@ -22,3 +22,6 @@
 [submodule "Carthage/Checkouts/BigBrother"]
 	path = Carthage/Checkouts/BigBrother
 	url = https://github.com/marcelofabri/BigBrother.git
+[submodule "Carthage/Checkouts/ReactKitCalculator"]
+	url = https://github.com/ReactKit/ReactKitCalculator.git
+	path = Carthage/Checkouts/ReactKitCalculator
