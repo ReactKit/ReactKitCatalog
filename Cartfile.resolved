@@ -1,7 +1,7 @@
 github "Alamofire/Alamofire" "1.1.4"
 github "duemunk/Async" "1.1.1"
 github "marcelofabri/BigBrother" "0.1.0"
-github "ankurp/Dollar.swift" "2.1.0"
+github "ankurp/Dollar.swift" "2.1.1"
 github "Haneke/HanekeSwift" "v0.8.1"
 github "ReactKit/SwiftTask" "2.6.1"
 github "SwiftyJSON/SwiftyJSON" "2.1.3"
