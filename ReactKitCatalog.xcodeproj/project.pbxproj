@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3E42261AB1DF8100BA6C97 /* ArrayKVOViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E42251AB1DF8100BA6C97 /* ArrayKVOViewModel.swift */; };
 		1F3EFF5319DEF3460004CD7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFF5219DEF3460004CD7D /* AppDelegate.swift */; };
 		1F3EFF5519DEF3460004CD7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFF5419DEF3460004CD7D /* ViewController.swift */; };
 		1F3EFF5719DEF3460004CD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EFF5619DEF3460004CD7D /* Images.xcassets */; };
@@ -46,10 +47,14 @@
 		1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */; };
 		1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */; };
 		1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC652C1A5AC83500DBC837 /* Async.swift */; };
+		480E83E81ABB9B0D00AF8346 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E83E71ABB9B0D00AF8346 /* Helper.swift */; };
+		480E83E91ABB9B0D00AF8346 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E83E71ABB9B0D00AF8346 /* Helper.swift */; };
 		4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556CF1A4CFFB2007770CA /* ReactKit.framework */; };
 		4845571F1A4CFFD5007770CA /* SwiftTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484557171A4CFFB2007770CA /* SwiftTask.framework */; };
 		486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486BC52119E3DEDD0094587F /* ButtonViewController.swift */; };
 		486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486BC52219E3DEDD0094587F /* ButtonViewController.xib */; };
+		488B1E151AAD225B0083A5AF /* ArrayKVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488B1E131AAD225B0083A5AF /* ArrayKVOViewController.swift */; };
+		488B1E161AAD225B0083A5AF /* ArrayKVOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 488B1E141AAD225B0083A5AF /* ArrayKVOViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -315,6 +320,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F3E42251AB1DF8100BA6C97 /* ArrayKVOViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayKVOViewModel.swift; sourceTree = "<group>"; };
 		1F3EFF4E19DEF3460004CD7D /* ReactKitCatalog-OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ReactKitCatalog-OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F3EFF5119DEF3460004CD7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F3EFF5219DEF3460004CD7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -347,10 +353,13 @@
 		1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
 		1FCC652C1A5AC83500DBC837 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Dollar.xcodeproj; sourceTree = "<group>"; };
+		480E83E71ABB9B0D00AF8346 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactKit.xcodeproj; sourceTree = "<group>"; };
 		484556871A4CFFB2007770CA /* SwiftTask.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftTask.xcodeproj; sourceTree = "<group>"; };
 		486BC52119E3DEDD0094587F /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		486BC52219E3DEDD0094587F /* ButtonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonViewController.xib; sourceTree = "<group>"; };
+		488B1E131AAD225B0083A5AF /* ArrayKVOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayKVOViewController.swift; sourceTree = "<group>"; };
+		488B1E141AAD225B0083A5AF /* ArrayKVOViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArrayKVOViewController.xib; sourceTree = "<group>"; };
 		48DA20C01A5CAA8A00384E6C /* Haneke.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Haneke.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -386,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				484554F81A4CFFB1007770CA /* Checkouts */,
+				480E83E61ABB9B0D00AF8346 /* Shared */,
 				1F3EFF4F19DEF3460004CD7D /* ReactKitCatalog-OSX */,
 				1F3EFF9819DEF3FD0004CD7D /* ReactKitCatalog-iOS */,
 				1F3EFEDE19DEF11B0004CD7D /* Products */,
@@ -459,6 +469,9 @@
 				1F7A4FC619E29DEF0073250E /* GestureViewController.xib */,
 				1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */,
 				1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */,
+				1F3E42251AB1DF8100BA6C97 /* ArrayKVOViewModel.swift */,
+				488B1E131AAD225B0083A5AF /* ArrayKVOViewController.swift */,
+				488B1E141AAD225B0083A5AF /* ArrayKVOViewController.xib */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -585,6 +598,14 @@
 				1FCC65C11A5ACDAB00DBC837 /* DollarTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		480E83E61ABB9B0D00AF8346 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				480E83E71ABB9B0D00AF8346 /* Helper.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		484554F81A4CFFB1007770CA /* Checkouts */ = {
@@ -980,6 +1001,7 @@
 				1F3EFFA319DEF3FD0004CD7D /* LaunchScreen.xib in Resources */,
 				486BC52A19E3EB230094587F /* ButtonViewController.xib in Resources */,
 				1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */,
+				488B1E161AAD225B0083A5AF /* ArrayKVOViewController.xib in Resources */,
 				1F85642B1A94C6DB00103F01 /* CalculatorViewController.xib in Resources */,
 				1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */,
 				1F7E3BE019DF04EA00DFB363 /* Main.storyboard in Resources */,
@@ -998,6 +1020,7 @@
 			files = (
 				1F3EFF5519DEF3460004CD7D /* ViewController.swift in Sources */,
 				1F3EFF5319DEF3460004CD7D /* AppDelegate.swift in Sources */,
+				480E83E81ABB9B0D00AF8346 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1006,6 +1029,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F7A4FCE19E2A5350073250E /* Catalog.swift in Sources */,
+				488B1E151AAD225B0083A5AF /* ArrayKVOViewController.swift in Sources */,
+				480E83E91ABB9B0D00AF8346 /* Helper.swift in Sources */,
 				486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */,
 				1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */,
 				1F89DDB119E2C97F00E89E32 /* MultipleTextFieldViewController.swift in Sources */,
@@ -1015,6 +1040,7 @@
 				1F3EFFA219DEF3FD0004CD7D /* AppDelegate.swift in Sources */,
 				1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */,
 				1F85642A1A94C6DB00103F01 /* CalculatorViewController.swift in Sources */,
+				1F3E42261AB1DF8100BA6C97 /* ArrayKVOViewModel.swift in Sources */,
 				1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
