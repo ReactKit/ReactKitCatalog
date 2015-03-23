@@ -1,4 +1,4 @@
-github "ReactKit/ReactKit" ~> 0.8.0
+github "ReactKit/ReactKit" ~> 0.8.1
 github "ReactKit/ReactKitCalculator" ~> 0.1.0
 
 github "Alamofire/Alamofire" ~> 1.1.3

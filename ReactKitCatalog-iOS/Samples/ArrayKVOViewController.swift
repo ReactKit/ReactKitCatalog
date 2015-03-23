@@ -134,7 +134,8 @@ class ArrayKVOViewController: UITableViewController
         (self.toggleButtonItem, "title") <~ changeMaxCountSignal
         
         // REACT: sections changed
-        self.viewModel.sectionDatas.signal ~> { [unowned self] sectionDatas, sectionChange, sectionIndexSet in
+        let sectionDatasChangedSignal = self.viewModel.sectionDatas.signal().ownedBy(self.viewModel)
+        sectionDatasChangedSignal ~> { [unowned self] sectionDatas, sectionChange, sectionIndexSet in
             
             println()
             println("[sectionDatas changed]")
@@ -149,7 +150,8 @@ class ArrayKVOViewController: UITableViewController
                     let sectionData = self.viewModel.sectionDatas.proxy[sectionIndex] as SectionData
                 
                     // REACT: rows changed
-                    sectionData.rowDatas.signal ~> { [weak sectionData] rowDatas, rowChange, rowIndexSet in
+                    let rowDatasChangedSignal = sectionData.rowDatas.signal().ownedBy(sectionData)
+                    rowDatasChangedSignal ~> { [weak sectionData] rowDatas, rowChange, rowIndexSet in
                         
                         let sectionData: SectionData! = sectionData // strongify
                         if sectionData == nil { return }
