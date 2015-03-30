@@ -22,11 +22,12 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
         
         for gesture in self.gestures {
             
-            gesture.delegate = self;
+            gesture.delegate = self
+            let gestureClassName = NSStringFromClass(gesture.dynamicType)
             
             let signal: Signal<NSString?> = gesture.signal { gesture -> NSString? in
                 // e.g. UITapGestureRecognizer state=3 (161.0,325.0)
-                return "\(NSStringFromClass(gesture!.dynamicType)) state=\(gesture!.state.rawValue) \(gesture!.locationInView(gesture?.view))"
+                return "\(gestureClassName) state=\(gesture!.state.rawValue) \(gesture!.locationInView(gesture?.view))"
             }
             
             // REACT: gesture ~> println

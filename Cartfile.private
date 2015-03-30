@@ -1,9 +1,10 @@
-github "ReactKit/ReactKit" ~> 0.8.1
-github "ReactKit/ReactKitCalculator" ~> 0.1.0
+github "ReactKit/ReactKit" "swift/1.2" #~> 0.8.1
+github "ReactKit/SwiftTask" "swift/1.2" #~> 0.7.0
+github "ReactKit/ReactKitCalculator" "swift/1.2" #~> 0.1.0
 
-github "Alamofire/Alamofire" ~> 1.1.3
-github "SwiftyJSON/SwiftyJSON" ~> 2.1.2
-github "duemunk/Async" ~> 1.1.1
-github "ankurp/Dollar.swift" "6768b4c" #~> 2.1.1
-github "Haneke/HanekeSwift" ~> 0.8.1
-github "marcelofabri/BigBrother" ~> 0.1.0
+github "Alamofire/Alamofire" "xcode-6.3" #~> 1.1.3
+github "SwiftyJSON/SwiftyJSON" "xcode6.3" #~> 2.1.2
+github "duemunk/Async" "feature/Swift_1.2" #~> 1.1.1
+github "inamiy/Dollar.swift" "swift/1.2" # ankurp/Dollar.swift" "xcode-6.3-beta-swift-1.2" #~> 2.1.1
+github "marcelofabri/HanekeSwift" "xcode-6.3" #"Haneke/HanekeSwift" ~> 0.8.1
+github "marcelofabri/BigBrother" "swift-1.2beta" #~> 0.1.0

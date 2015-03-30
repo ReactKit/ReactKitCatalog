@@ -24,8 +24,10 @@ struct Catalog
             Catalog(title: "UITextField (Multiple)", description: "Login example", class_: MultipleTextFieldViewController.self),
             Catalog(title: "UIGestureRecognizer", description: "Signal.merge2()", class_: GestureViewController.self),
             Catalog(title: "Who To Follow", description: "Suggestion box", class_: WhoToFollowViewController.self, selected: false),
-            Catalog(title: "Calculator", description: "Mimics iOS Calculator.app", class_: CalculatorViewController.self, selected: false),
-            Catalog(title: "Array + Table", description: "DynamicArray + KVO.detailedSignal()", class_: ArrayKVOViewController.self, selected: true)
+            Catalog(title: "Calculator", description: "Mimics iOS Calculator.app", class_: CalculatorViewController.self, selected: true),
+            
+            // FIXME: This sample doesn't work in current Xcode6.3-beta4 (Swift 1.2)
+//            Catalog(title: "Array + Table", description: "DynamicArray + KVO.detailedSignal()", class_: ArrayKVOViewController.self, selected: true)
         ]
     }
     

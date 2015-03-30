@@ -61,15 +61,15 @@ class MultipleTextFieldViewController: UIViewController
         // create button-enabling signal via any textField change
         self.buttonEnablingSignal = combinedTextSignal.map { (values, changedValue) -> NSNumber? in
             
-            let username: NSString? = values[0]?
-            let email: NSString? = values[1]?
-            let password: NSString? = values[2]?
-            let password2: NSString? = values[3]?
+            let username: NSString? = values[0] ?? nil
+            let email: NSString? = values[1] ?? nil
+            let password: NSString? = values[2] ?? nil
+            let password2: NSString? = values[3] ?? nil
             
             println("username=\(username), email=\(email), password=\(password), password2=\(password2)")
             
             // validation
-            let buttonEnabled = username?.length > 0 && email?.length > 0 && password?.length >= MIN_PASSWORD_LENGTH && password? == password2?
+            let buttonEnabled = username?.length > 0 && email?.length > 0 && password?.length >= MIN_PASSWORD_LENGTH && password == password2
             
             println("buttonEnabled = \(buttonEnabled)")
             
@@ -79,10 +79,10 @@ class MultipleTextFieldViewController: UIViewController
         // create error-messaging signal via any textField change
         self.errorMessagingSignal = combinedTextSignal.map { (values, changedValue) -> NSString? in
             
-            let username: NSString? = values[0]?
-            let email: NSString? = values[1]?
-            let password: NSString? = values[2]?
-            let password2: NSString? = values[3]?
+            let username: NSString? = values[0] ?? nil
+            let email: NSString? = values[1] ?? nil
+            let password: NSString? = values[2] ?? nil
+            let password2: NSString? = values[3] ?? nil
             
             if username?.length <= 0 {
                 return "Username is not set."
@@ -93,7 +93,7 @@ class MultipleTextFieldViewController: UIViewController
             else if password?.length < MIN_PASSWORD_LENGTH {
                 return "Password requires at least \(MIN_PASSWORD_LENGTH) characters."
             }
-            else if password? != password2? {
+            else if password != password2 {
                 return "Password is not same."
             }
             

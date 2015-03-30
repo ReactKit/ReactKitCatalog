@@ -35,13 +35,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         self._setupAppearance()
         
-        let splitVC = self.window!.rootViewController as UISplitViewController
+        let splitVC = self.window!.rootViewController as! UISplitViewController
         splitVC.delegate = self
         
-        let mainNavC = splitVC.viewControllers[0] as UINavigationController
+        let mainNavC = splitVC.viewControllers[0] as! UINavigationController
 //        let detailNavC = splitVC.viewControllers[1] as UINavigationController
         
-        let mainVC = mainNavC.topViewController as MasterViewController
+        let mainVC = mainNavC.topViewController as! MasterViewController
         
         // NOTE: use dispatch_after to check `splitVC.collapsed` after delegation is complete (for iPad)
         // FIXME: look for better solution

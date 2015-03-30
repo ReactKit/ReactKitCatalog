@@ -50,7 +50,7 @@ class TimerViewController: UIViewController
     // use IBAction instead of ReactKit.Signal for this tutorial
     @IBAction func handlePauseResumeButton(sender: AnyObject)
     {
-        let button = sender as UIButton
+        let button = sender as! UIButton
         
         switch self.signal!.state {
             case .Paused:

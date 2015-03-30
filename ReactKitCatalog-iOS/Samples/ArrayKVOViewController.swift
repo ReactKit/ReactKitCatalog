@@ -12,6 +12,15 @@ import Dollar
 
 let CELL_IDENTIFIER = "Cell"
 
+//
+// FIXME:
+// This sample doesn't work in current Xcode6.3-beta4 (Swift 1.2), e.g.
+//
+// - can't create UIBarButtonItem's deinitSignal (barButtonItem seems to become nil immediately for some reason...)
+// - can't override `init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)`
+//
+// These issues are probably due to UIKit's immatureness rather than Swift 1.2.
+//
 class ArrayKVOViewController: UITableViewController
 {
     typealias SectionData = ArrayKVOViewModel.SectionData
