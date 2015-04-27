@@ -16,28 +16,32 @@ class TextFieldViewController: UIViewController
     @IBOutlet var debounceLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
-    var signal: Signal<NSString?>?
-    var throttleSignal: Signal<NSString?>?
-    var debounceSignal: Signal<NSString?>?
+    var stream: Stream<NSString?>?
+    var throttleStream: Stream<NSString?>?
+    var debounceStream: Stream<NSString?>?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        self.signal = self.textField?.textChangedSignal()
-        self.throttleSignal = self.signal?.throttle(1).map { text -> NSString? in "\(text!) (throttled)" }
-        self.debounceSignal = self.signal?.debounce(1).map { text -> NSString? in "\(text!) (debounced)" }
+        self.stream = self.textField?.textChangedStream()
+        self.throttleStream = self.stream!
+            |> throttle(1)
+            |> map { text -> NSString? in "\(text!) (throttled)" }
+        self.debounceStream = self.stream!
+            |> debounce(1)
+            |> map { text -> NSString? in "\(text!) (debounced)" }
         
         // REACT: textField ~> label
-        (self.label, "text") <~ self.signal!
+        (self.label, "text") <~ self.stream!
         
         // REACT: textField ~> throttleLabel
-        (self.throttleLabel, "text") <~ self.throttleSignal!
+        (self.throttleLabel, "text") <~ self.throttleStream!
         
         // REACT: textField ~> debounceLabel
-        (self.debounceLabel, "text") <~ self.debounceSignal!
+        (self.debounceLabel, "text") <~ self.debounceStream!
         
 //        // REACT: textField ~> println
-//        ^{ println($0!) } <~ self.signal!
+//        ^{ println($0!) } <~ self.stream!
     }
 }

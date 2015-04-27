@@ -39,29 +39,34 @@ class WhoToFollowViewController: UIViewController {
     
     func _setupButtons()
     {
-        let refreshButtonSignal: Signal<NSString?> = self.refreshButton!.buttonSignal("refresh")
+        let refreshButtonStream: Stream<NSString?> = self.refreshButton!.buttonStream("refresh")
         
-        let user1ButtonSignal = self.user1Button!.buttonSignal(1)
-        let user2ButtonSignal = self.user2Button!.buttonSignal(2)
-        let user3ButtonSignal = self.user3Button!.buttonSignal(3)
+        let user1ButtonStream = self.user1Button!.buttonStream(1)
+        let user2ButtonStream = self.user2Button!.buttonStream(2)
+        let user3ButtonStream = self.user3Button!.buttonStream(3)
         
         /// refreshButton -> random URL -> get JSON
-        let jsonSignal = refreshButtonSignal
-            .startWith("refresh on start")
-            .map { _ -> Alamofire.Request in
+        let jsonStream = refreshButtonStream
+            |> startWith("refresh on start")
+            |> map { _ -> Alamofire.Request in
                 let since = Int(arc4random_uniform(500))
                 return Alamofire.request(.GET, "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
             }
-            .flatMap { [weak self] in Signal<SwiftyJSON.JSON>.fromTask(self!._requestTask($0)) }
+            |> flatMap { [weak self] in Stream<SwiftyJSON.JSON>.fromTask(self!._requestTask($0)) }
         
         typealias UserDict = [String : AnyObject]
         
-        func createRandomUserSignal(userButtonSignal: Signal<Int>) -> Signal<UserDict?>
+        func createRandomUserStream(userButtonStream: Stream<Int>) -> Stream<UserDict?>
         {
-            // `Signal.merge2()` a.k.a `Rx.combineLatest()`
-            // NOTE: use `asSignal(Any)` whenever combining with different Signal types
-            return Signal<Any>.merge2([userButtonSignal.asSignal(Any).startWith("clear"), jsonSignal.asSignal(Any)])
-                .map { values, changedValue -> UserDict? in
+            let streams: [Stream<Any>] = [
+                userButtonStream
+                    |> map { $0 as Any }
+                    |> startWith("clear"),
+                jsonStream
+                    |> map { $0 as Any }
+            ]
+            return streams |> combineLatestAll
+                |> map { values -> UserDict? in
                     
                     if let json = values.last as? SwiftyJSON.JSON {
                         let randomIndex = Int(arc4random_uniform(UInt32(json.count)))
@@ -71,17 +76,18 @@ class WhoToFollowViewController: UIViewController {
                         return nil
                     }
                 }
-                .merge(refreshButtonSignal.map { _ in nil })
+                |> merge(refreshButtonStream
+                    |> map { _ in nil })
             
         }
-        let randomUser1Signal = createRandomUserSignal(user1ButtonSignal)
-        let randomUser2Signal = createRandomUserSignal(user2ButtonSignal)
-        let randomUser3Signal = createRandomUserSignal(user3ButtonSignal)
+        let randomUser1Stream = createRandomUserStream(user1ButtonStream)
+        let randomUser2Stream = createRandomUserStream(user2ButtonStream)
+        let randomUser3Stream = createRandomUserStream(user3ButtonStream)
         
-        // OWNED: retain signals by `self` (convenient method in replace of `self.retainingSignals += [mySignal]`)
-        randomUser1Signal.ownedBy(self)
-        randomUser2Signal.ownedBy(self)
-        randomUser3Signal.ownedBy(self)
+        // OWNED: retain streams by `self` (convenient method in replace of `self.retainingStreams += [myStream]`)
+        randomUser1Stream.ownedBy(self)
+        randomUser2Stream.ownedBy(self)
+        randomUser3Stream.ownedBy(self)
         
         //--------------------------------------------------
         // Render
@@ -103,13 +109,13 @@ class WhoToFollowViewController: UIViewController {
         }
         
         // REACT: userButton ~> re-render
-        randomUser1Signal ~> { [weak self] userDict in
+        randomUser1Stream ~> { [weak self] userDict in
             renderUserButton(self?.user1Button, userDict)
         }
-        randomUser2Signal ~> { [weak self] userDict in
+        randomUser2Stream ~> { [weak self] userDict in
             renderUserButton(self?.user2Button, userDict)
         }
-        randomUser3Signal ~> { [weak self] userDict in
+        randomUser3Stream ~> { [weak self] userDict in
             renderUserButton(self?.user3Button, userDict)
         }
         

@@ -26,17 +26,17 @@ class MultipleTextFieldViewController: UIViewController
     @IBOutlet var messageLabel: UILabel!
     @IBOutlet var okButton: UIButton!
     
-    var buttonEnablingSignal: Signal<NSNumber?>?
-    var buttonEnablingSignal2: Signal<[AnyObject?]>?
-    var errorMessagingSignal: Signal<NSString?>?
-    var buttonTappedSignal: Signal<NSString?>?
+    var buttonEnablingStream: Stream<NSNumber?>?
+    var buttonEnablingStream2: Stream<[AnyObject?]>?
+    var errorMessagingStream: Stream<NSString?>?
+    var buttonTappedStream: Stream<NSString?>?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         self._setupViews()
-        self._setupSignals()
+        self._setupStreams()
     }
     
     func _setupViews()
@@ -45,96 +45,99 @@ class MultipleTextFieldViewController: UIViewController
         self.okButton.enabled = false
     }
     
-    func _setupSignals()
+    func _setupStreams()
     {
         //--------------------------------------------------
-        // Create Signals
+        // Create Streams
         //--------------------------------------------------
         
-        let usernameTextSignal = self.usernameTextField.textChangedSignal()
-        let emailTextSignal = self.emailTextField.textChangedSignal()
-        let passwordTextSignal = self.passwordTextField.textChangedSignal()
-        let password2TextSignal = self.password2TextField.textChangedSignal()
+        let usernameTextStream = self.usernameTextField.textChangedStream()
+        let emailTextStream = self.emailTextField.textChangedStream()
+        let passwordTextStream = self.passwordTextField.textChangedStream()
+        let password2TextStream = self.password2TextField.textChangedStream()
         
-        let combinedTextSignal = Signal<NSString?>.merge2([usernameTextSignal, emailTextSignal, passwordTextSignal, password2TextSignal])
+        let combinedTextStream = [usernameTextStream, emailTextStream, passwordTextStream, password2TextStream]
+            |> merge2All
         
-        // create button-enabling signal via any textField change
-        self.buttonEnablingSignal = combinedTextSignal.map { (values, changedValue) -> NSNumber? in
-            
-            let username: NSString? = values[0] ?? nil
-            let email: NSString? = values[1] ?? nil
-            let password: NSString? = values[2] ?? nil
-            let password2: NSString? = values[3] ?? nil
-            
-            println("username=\(username), email=\(email), password=\(password), password2=\(password2)")
-            
-            // validation
-            let buttonEnabled = username?.length > 0 && email?.length > 0 && password?.length >= MIN_PASSWORD_LENGTH && password == password2
-            
-            println("buttonEnabled = \(buttonEnabled)")
-            
-            return NSNumber(bool: buttonEnabled)    // NOTE: use NSNumber because KVO does not understand Bool
-        }
+        // create button-enabling stream via any textField change
+        self.buttonEnablingStream = combinedTextStream
+            |> map { (values, changedValue) -> NSNumber? in
+                
+                let username: NSString? = values[0] ?? nil
+                let email: NSString? = values[1] ?? nil
+                let password: NSString? = values[2] ?? nil
+                let password2: NSString? = values[3] ?? nil
+                
+                println("username=\(username), email=\(email), password=\(password), password2=\(password2)")
+                
+                // validation
+                let buttonEnabled = username?.length > 0 && email?.length > 0 && password?.length >= MIN_PASSWORD_LENGTH && password == password2
+                
+                println("buttonEnabled = \(buttonEnabled)")
+                
+                return NSNumber(bool: buttonEnabled)    // NOTE: use NSNumber because KVO does not understand Bool
+            }
         
-        // create error-messaging signal via any textField change
-        self.errorMessagingSignal = combinedTextSignal.map { (values, changedValue) -> NSString? in
+        // create error-messaging stream via any textField change
+        self.errorMessagingStream = combinedTextStream
+            |> map { (values, changedValue) -> NSString? in
             
-            let username: NSString? = values[0] ?? nil
-            let email: NSString? = values[1] ?? nil
-            let password: NSString? = values[2] ?? nil
-            let password2: NSString? = values[3] ?? nil
-            
-            if username?.length <= 0 {
-                return "Username is not set."
+                let username: NSString? = values[0] ?? nil
+                let email: NSString? = values[1] ?? nil
+                let password: NSString? = values[2] ?? nil
+                let password2: NSString? = values[3] ?? nil
+                
+                if username?.length <= 0 {
+                    return "Username is not set."
+                }
+                else if email?.length <= 0 {
+                    return "Email is not set."
+                }
+                else if password?.length < MIN_PASSWORD_LENGTH {
+                    return "Password requires at least \(MIN_PASSWORD_LENGTH) characters."
+                }
+                else if password != password2 {
+                    return "Password is not same."
+                }
+                
+                return nil
             }
-            else if email?.length <= 0 {
-                return "Email is not set."
-            }
-            else if password?.length < MIN_PASSWORD_LENGTH {
-                return "Password requires at least \(MIN_PASSWORD_LENGTH) characters."
-            }
-            else if password != password2 {
-                return "Password is not same."
-            }
-            
-            return nil
-        }
         
-        // create button-tapped signal via okButton
-        self.buttonTappedSignal = self.okButton.buttonSignal("OK")
+        // create button-tapped stream via okButton
+        self.buttonTappedStream = self.okButton.buttonStream("OK")
         
         //--------------------------------------------------
-        // Signal callbacks on finished
+        // Stream callbacks on finished
         //--------------------------------------------------
         
-        self.buttonEnablingSignal?.then { value, errorInfo -> Void in
-            println("buttonEnablingSignal finished")
+        self.buttonEnablingStream?.then { value, errorInfo -> Void in
+            println("buttonEnablingStream finished")
         }
-        self.errorMessagingSignal?.then { value, errorInfo -> Void in
-            println("errorMessagingSignal finished")
+        self.errorMessagingStream?.then { value, errorInfo -> Void in
+            println("errorMessagingStream finished")
         }
-        self.buttonTappedSignal?.then { value, errorInfo -> Void in
-            println("buttonTappedSignal finished")
+        self.buttonTappedStream?.then { value, errorInfo -> Void in
+            println("buttonTappedStream finished")
         }
         
         //--------------------------------------------------
-        // Bind & React to Signals
+        // Bind & React to Streams
         //--------------------------------------------------
         
         // REACT: enable/disable okButton
-        (self.okButton, "enabled") <~ self.buttonEnablingSignal!
+        (self.okButton, "enabled") <~ self.buttonEnablingStream!
         
         // REACT: update error-message
-        (self.messageLabel, "text") <~ self.errorMessagingSignal!
+        (self.messageLabel, "text") <~ self.errorMessagingStream!
         
         // REACT: button tap
-        self.buttonTappedSignal! ~> { [weak self] (value: NSString?) -> Void in
+        self.buttonTappedStream! ~> { [weak self] (value: NSString?) -> Void in
             if let self_ = self {
                 if value == "OK" {
-                    // release all signals when receiving "OK" signal
-                    self_.buttonEnablingSignal = nil
-                    self_.errorMessagingSignal = nil
-                    self_.buttonTappedSignal = nil
+                    // release all streams when receiving "OK" stream
+                    self_.buttonEnablingStream = nil
+                    self_.errorMessagingStream = nil
+                    self_.buttonTappedStream = nil
                 }
             }
         }

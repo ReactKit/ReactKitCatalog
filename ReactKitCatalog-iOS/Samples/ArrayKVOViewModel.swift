@@ -19,7 +19,7 @@ class ArrayKVOViewModel: NSObject
     /// used as insert/replace/remove maxCount
     dynamic var changeMaxCount = 1
     
-    // workaround for KVO-signaling Swift enum
+    // workaround for KVO-streaming Swift enum
     private(set) dynamic var tableLocationString = defaultTableLocation.rawValue
     
     // NOTE: `dynamic var` is not available
@@ -73,7 +73,7 @@ extension ArrayKVOViewModel
         }
         
         let section = $.random(sectionCount)
-        let sectionData = self.sectionDatas.proxy[section] as SectionData
+        let sectionData = self.sectionDatas.proxy[section] as! SectionData
         let rowCount = sectionData.rowDatas.proxy.count
         
         let indexes = _pickRandom(0...rowCount, self.changeMaxCount)
@@ -118,7 +118,7 @@ extension ArrayKVOViewModel
         let sectionCount = self.sectionDatas.proxy.count
         
         let section = $.random(sectionCount)
-        let sectionData = self.sectionDatas.proxy[section] as SectionData
+        let sectionData = self.sectionDatas.proxy[section] as! SectionData
         let rowCount = sectionData.rowDatas.proxy.count
         
         let indexes = _pickRandom(0..<rowCount, min(self.changeMaxCount, rowCount))
@@ -161,7 +161,7 @@ extension ArrayKVOViewModel
         let sectionCount = self.sectionDatas.proxy.count
         
         let section = $.random(sectionCount)
-        let sectionData = self.sectionDatas.proxy[section] as SectionData
+        let sectionData = self.sectionDatas.proxy[section] as! SectionData
         let rowCount = sectionData.rowDatas.proxy.count
         
         let indexes = _pickRandom(0..<rowCount, min(self.changeMaxCount, rowCount))
@@ -187,14 +187,14 @@ extension ArrayKVOViewModel
             self.rowDatas = rowDatas
         }
         
-        convenience init(title: String, rowDatas: [RowData])
+        convenience init(title: String, rowDataArray: [RowData])
         {
-            self.init(title: title, rowDatas: DynamicArray/*<RowData>*/(rowDatas))
+            self.init(title: title, rowDatas: DynamicArray/*<RowData>*/(rowDataArray))
         }
         
         subscript(i: Int) -> RowData
         {
-            return self.rowDatas.proxy[i] as RowData
+            return self.rowDatas.proxy[i] as! RowData
         }
         
         /// return 1 sectionData with random (0..<3) rowDatas
@@ -207,7 +207,7 @@ extension ArrayKVOViewModel
                     return RowData(title: "\(dateString)-\(i)")
             }
             
-            return SectionData(title: "\(dateString)", rowDatas: rowDatas)
+            return SectionData(title: "\(dateString)", rowDataArray: rowDatas)
         }
         
         /// return 1 sectionData with 0 rowDatas
@@ -215,7 +215,7 @@ extension ArrayKVOViewModel
         {
             let dateString = _dateString(NSDate())
             
-            return SectionData(title: "\(dateString)", rowDatas: [])
+            return SectionData(title: "\(dateString)", rowDataArray: [])
         }
     }
     

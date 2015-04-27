@@ -16,7 +16,7 @@ let CELL_IDENTIFIER = "Cell"
 // FIXME:
 // This sample doesn't work in current Xcode6.3-beta4 (Swift 1.2), e.g.
 //
-// - can't create UIBarButtonItem's deinitSignal (barButtonItem seems to become nil immediately for some reason...)
+// - can't create UIBarButtonItem's deinitStream (barButtonItem seems to become nil immediately for some reason...)
 // - can't override `init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?)`
 //
 // These issues are probably due to UIKit's immatureness rather than Swift 1.2.
@@ -60,7 +60,7 @@ class ArrayKVOViewController: UITableViewController
         super.viewDidLoad()
         
         self._setupViews()
-        self._setupSignals()
+        self._setupStreams()
         self._performDemo()
     }
     
@@ -79,11 +79,11 @@ class ArrayKVOViewController: UITableViewController
         self.navigationController?.setToolbarHidden(false, animated: false)
     }
     
-    func _setupSignals()
+    func _setupStreams()
     {
         // REACT: insert button
-        let insertButtonSignal = self.insertButtonItem.signal().ownedBy(self)
-        insertButtonSignal ~> { [unowned self] _ in
+        let insertButtonStream = self.insertButtonItem.stream().ownedBy(self)
+        insertButtonStream ~> { [unowned self] _ in
             println()
             println("[insert button]")
             
@@ -91,8 +91,8 @@ class ArrayKVOViewController: UITableViewController
         }
         
         // REACT: replace button
-        let replaceButtonSignal = self.replaceButtonItem.signal().ownedBy(self)
-        replaceButtonSignal ~> { [unowned self] _ in
+        let replaceButtonStream = self.replaceButtonItem.stream().ownedBy(self)
+        replaceButtonStream ~> { [unowned self] _ in
             println()
             println("[replace button]")
             
@@ -100,8 +100,8 @@ class ArrayKVOViewController: UITableViewController
         }
         
         // REACT: remove button
-        let removeButtonSignal = self.removeButtonItem.signal().ownedBy(self)
-        removeButtonSignal ~> { [unowned self] _ in
+        let removeButtonStream = self.removeButtonItem.stream().ownedBy(self)
+        removeButtonStream ~> { [unowned self] _ in
             println()
             println("[remove button]")
             
@@ -109,8 +109,8 @@ class ArrayKVOViewController: UITableViewController
         }
     
         // REACT: decrement button
-        let decrementButtonSignal = self.decrementButtonItem.signal().ownedBy(self)
-        decrementButtonSignal ~> { [unowned self] _ in
+        let decrementButtonStream = self.decrementButtonItem.stream().ownedBy(self)
+        decrementButtonStream ~> { [unowned self] _ in
             println()
             println("[decrement button]")
             
@@ -118,8 +118,8 @@ class ArrayKVOViewController: UITableViewController
         }
         
         // REACT: increment button
-        let incrementButtonSignal = self.incrementButtonItem.signal().ownedBy(self)
-        incrementButtonSignal ~> { [unowned self] _ in
+        let incrementButtonStream = self.incrementButtonItem.stream().ownedBy(self)
+        incrementButtonStream ~> { [unowned self] _ in
             println()
             println("[increment button]")
             
@@ -127,8 +127,8 @@ class ArrayKVOViewController: UITableViewController
         }
         
         // REACT: section/row toggle button
-        let toggleButtonSignal = self.toggleButtonItem.signal().ownedBy(self)
-        toggleButtonSignal ~> { [unowned self] _ in
+        let toggleButtonStream = self.toggleButtonItem.stream().ownedBy(self)
+        toggleButtonStream ~> { [unowned self] _ in
             println()
             println("[toggle button]")
             
@@ -136,15 +136,19 @@ class ArrayKVOViewController: UITableViewController
         }
         
         // REACT: changeMaxCount label
-        let changeMaxCountSignal: Signal<AnyObject?> =
-            Signal<AnyObject?>.combineLatest([KVO.startingSignal(self.viewModel, "changeMaxCount"), KVO.startingSignal(self.viewModel, "tableLocationString")])
-                .map { values -> AnyObject? in "\(values[0]!) \(values[1]!)" }  // e.g. "1 Section"
-                .ownedBy(self)
-        (self.toggleButtonItem, "title") <~ changeMaxCountSignal
+        let changeMaxCountStream: Stream<AnyObject?> = [
+            KVO.startingStream(self.viewModel, "changeMaxCount"),
+            KVO.startingStream(self.viewModel, "tableLocationString")
+        ]
+            |> combineLatestAll
+            |> map { values -> AnyObject? in "\(values[0]!) \(values[1]!)" }  // e.g. "1 Section"
+        
+        changeMaxCountStream.ownedBy(self)
+        (self.toggleButtonItem, "title") <~ changeMaxCountStream
         
         // REACT: sections changed
-        let sectionDatasChangedSignal = self.viewModel.sectionDatas.signal().ownedBy(self.viewModel)
-        sectionDatasChangedSignal ~> { [unowned self] sectionDatas, sectionChange, sectionIndexSet in
+        let sectionDatasChangedStream = self.viewModel.sectionDatas.stream().ownedBy(self.viewModel)
+        sectionDatasChangedStream ~> { [unowned self] sectionDatas, sectionChange, sectionIndexSet in
             
             println()
             println("[sectionDatas changed]")
@@ -156,11 +160,11 @@ class ArrayKVOViewController: UITableViewController
                 
                 sectionIndexSet.enumerateIndexesUsingBlock { sectionIndex, stop in
                     
-                    let sectionData = self.viewModel.sectionDatas.proxy[sectionIndex] as SectionData
+                    let sectionData = self.viewModel.sectionDatas.proxy[sectionIndex] as! SectionData
                 
                     // REACT: rows changed
-                    let rowDatasChangedSignal = sectionData.rowDatas.signal().ownedBy(sectionData)
-                    rowDatasChangedSignal ~> { [weak sectionData] rowDatas, rowChange, rowIndexSet in
+                    let rowDatasChangedStream = sectionData.rowDatas.stream().ownedBy(sectionData)
+                    rowDatasChangedStream ~> { [weak sectionData] rowDatas, rowChange, rowIndexSet in
                         
                         let sectionData: SectionData! = sectionData // strongify
                         if sectionData == nil { return }
@@ -224,7 +228,7 @@ class ArrayKVOViewController: UITableViewController
         Async.main(after: 0.2 + step * 0) {
             println("*** addObject (section & row) ***")
             
-            self.viewModel.sectionDatas.proxy.addObject(SectionData(title: "Section 1", rowDatas: [
+            self.viewModel.sectionDatas.proxy.addObject(SectionData(title: "Section 1", rowDataArray: [
                 RowData(title: "title 1-0"),
                 RowData(title: "title 1-1")
             ]))
@@ -233,7 +237,7 @@ class ArrayKVOViewController: UITableViewController
         Async.main(after: 0.2 + step * 1) {
             println("*** insertObject ***")
             
-            self.viewModel.sectionDatas.proxy.insertObject(SectionData(title: "Section 0", rowDatas: [
+            self.viewModel.sectionDatas.proxy.insertObject(SectionData(title: "Section 0", rowDataArray: [
                 RowData(title: "title 0-0")
             ]), atIndex: 0)
         }
@@ -241,7 +245,7 @@ class ArrayKVOViewController: UITableViewController
         Async.main(after: 0.2 + step * 2) {
             println("*** replaceObjectAtIndex ***")
             
-            self.viewModel.sectionDatas.proxy.replaceObjectAtIndex(0, withObject: SectionData(title: "Section 0b", rowDatas: [
+            self.viewModel.sectionDatas.proxy.replaceObjectAtIndex(0, withObject: SectionData(title: "Section 0b", rowDataArray: [
                 RowData(title: "title 0-1b")
             ]))
         }
@@ -255,7 +259,7 @@ class ArrayKVOViewController: UITableViewController
         Async.main(after: 0.2 + step * 4) {
             println("*** addObject (row) ***")
             
-            let sectionData = self.viewModel.sectionDatas.proxy[0] as SectionData
+            let sectionData = self.viewModel.sectionDatas.proxy[0] as! SectionData
             sectionData.rowDatas.proxy.addObject(RowData(title: "title 1-2"))
             
             self.tableView.userInteractionEnabled = true
@@ -271,13 +275,13 @@ class ArrayKVOViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        let sectionData = self.viewModel.sectionDatas.proxy[section] as SectionData
+        let sectionData = self.viewModel.sectionDatas.proxy[section] as! SectionData
         return sectionData.rowDatas.proxy.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as! UITableViewCell
         
         cell.textLabel?.text = self.viewModel.sectionDatas.proxy[indexPath.section][indexPath.row].title
 
@@ -294,7 +298,7 @@ class ArrayKVOViewController: UITableViewController
     {
         if editingStyle == .Delete {
             
-            let sectionData = self.viewModel.sectionDatas.proxy[indexPath.section] as SectionData
+            let sectionData = self.viewModel.sectionDatas.proxy[indexPath.section] as! SectionData
             sectionData.rowDatas.proxy.removeObjectAtIndex(indexPath.row)
             
         } else if editingStyle == .Insert {
