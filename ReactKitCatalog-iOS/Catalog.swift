@@ -22,10 +22,12 @@ struct Catalog
             Catalog(title: "UIButton/BarButton", description: "Basic", class_: ButtonViewController.self),
             Catalog(title: "UITextField", description: "throttle()/debounce()", class_: TextFieldViewController.self),
             Catalog(title: "UITextField (Multiple)", description: "Login example", class_: MultipleTextFieldViewController.self),
-            Catalog(title: "UIGestureRecognizer", description: "Signal.merge2()", class_: GestureViewController.self),
+            Catalog(title: "UIGestureRecognizer", description: "merge2All()", class_: GestureViewController.self),
             Catalog(title: "Who To Follow", description: "Suggestion box", class_: WhoToFollowViewController.self, selected: false),
             Catalog(title: "Calculator", description: "Mimics iOS Calculator.app", class_: CalculatorViewController.self, selected: false),
-            Catalog(title: "Array + Table", description: "DynamicArray + KVO.detailedSignal()", class_: ArrayKVOViewController.self, selected: true)
+            
+            // FIXME: This sample doesn't work in current Xcode6.3-beta4 (Swift 1.2)
+            Catalog(title: "Array + Table", description: "DynamicArray + KVO.detailedStream()", class_: ArrayKVOViewController.self, selected: true)
         ]
     }
     

@@ -1,9 +1,9 @@
-github "ReactKit/ReactKit" ~> 0.8.1
-github "ReactKit/ReactKitCalculator" ~> 0.1.0
+github "ReactKit/ReactKit" ~> 0.10.0
+github "ReactKit/ReactKitCalculator" ~> 0.2.0
 
-github "Alamofire/Alamofire" ~> 1.1.3
-github "SwiftyJSON/SwiftyJSON" ~> 2.1.2
-github "duemunk/Async" ~> 1.1.1
-github "ankurp/Dollar.swift" "6768b4c" #~> 2.1.1
-github "Haneke/HanekeSwift" ~> 0.8.1
-github "marcelofabri/BigBrother" ~> 0.1.0
+github "Alamofire/Alamofire" ~> 1.2.1
+github "SwiftyJSON/SwiftyJSON" ~> 2.2.0
+github "duemunk/Async" "ceb4051b248787cc860dd0e7169b1386e29345cf" # NOTE: 1.2.0 pre
+github "ankurp/Dollar.swift" ~> 3.0.0
+github "Haneke/HanekeSwift" ~> 0.9.1
+github "marcelofabri/BigBrother" ~> 0.2.0

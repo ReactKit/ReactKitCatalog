@@ -28,7 +28,7 @@ class MasterViewController: UITableViewController
         super.viewDidLoad()
         
         // auto-select
-        if let index = $.findIndex(self.catalogs, { $0.selected }) {
+        if let index = ($.findIndex(self.catalogs) { $0.selected }) {
             self.showDetailViewControllerAtIndex(index)
         }
     }
@@ -49,7 +49,7 @@ class MasterViewController: UITableViewController
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         let catalog = self.catalogs[indexPath.row]
         cell.textLabel?.text = catalog.title

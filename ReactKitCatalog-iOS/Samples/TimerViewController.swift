@@ -15,52 +15,52 @@ class TimerViewController: UIViewController
     @IBOutlet var pauseResumeButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
     
-    var signal: Signal<NSString?>?
+    var stream: Stream<NSString?>?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         // NOTE: use class method (no need to create NSTimer-instance)
-        self.signal = NSTimer.signal(timeInterval: 1) { (sender: NSTimer?) -> NSString? in
+        self.stream = NSTimer.stream(timeInterval: 1) { (sender: NSTimer?) -> NSString? in
             return "\(NSDate())"
         }
         
         // REACT: button ~> label
-        (self.label, "text") <~ self.signal!
+        (self.label, "text") <~ self.stream!
         
         // REACT: button ~> println
-        ^{ println($0!) } <~ self.signal!
+        ^{ println($0!) } <~ self.stream!
     }
     
     override func viewDidDisappear(animated: Bool)
     {
         super.viewDidDisappear(animated)
         
-        switch self.signal!.state {
+        switch self.stream!.state {
             case .Cancelled:
                 break
             default:
                 println()
-                println("NOTE: TimerViewController is not deinited yet (due to iOS8-UISplitViewController's behavior) so timer-signal is still alive.")
+                println("NOTE: TimerViewController is not deinited yet (due to iOS8-UISplitViewController's behavior) so timer-stream is still alive.")
                 println()
         }
     }
     
-    // use IBAction instead of ReactKit.Signal for this tutorial
+    // use IBAction instead of ReactKit.Stream for this tutorial
     @IBAction func handlePauseResumeButton(sender: AnyObject)
     {
-        let button = sender as UIButton
+        let button = sender as! UIButton
         
-        switch self.signal!.state {
+        switch self.stream!.state {
             case .Paused:
-                self.signal?.resume()
+                self.stream?.resume()
                 button.setTitle("Pause", forState: .Normal)
             case .Running:
-                self.signal?.pause()
+                self.stream?.pause()
                 button.setTitle("Resume", forState: .Normal)
             default:
-                println("Do nothing (timer-signal is already cancelled)")
+                println("Do nothing (timer-stream is already cancelled)")
                 break
         }
         
@@ -68,6 +68,6 @@ class TimerViewController: UIViewController
     
     @IBAction func handleCancelButton(sender: AnyObject)
     {
-        self.signal?.cancel()
+        self.stream?.cancel()
     }
 }

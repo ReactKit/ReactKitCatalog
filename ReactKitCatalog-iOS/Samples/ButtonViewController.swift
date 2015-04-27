@@ -15,8 +15,8 @@ class ButtonViewController: UIViewController
     @IBOutlet var button: UIButton!
     @IBOutlet var barButtonItem: UIBarButtonItem!
     
-    var buttonSignal: Signal<NSString?>?
-    var barButtonSignal: Signal<NSString?>?
+    var buttonStream: Stream<NSString?>?
+    var barButtonStream: Stream<NSString?>?
     
     override func viewDidLoad()
     {
@@ -28,25 +28,25 @@ class ButtonViewController: UIViewController
     
     func _setupButton()
     {
-//        self.buttonSignal = self.button?.buttonSignal("OK")
-        self.buttonSignal = self.button?.buttonSignal { _ in "Button \(arc4random_uniform(UInt32.max))" }
+//        self.buttonStream = self.button?.buttonStream("OK")
+        self.buttonStream = self.button?.buttonStream { _ in "Button \(arc4random_uniform(UInt32.max))" }
         
         // REACT: button ~> label
-        (self.label, "text") <~ self.buttonSignal!
+        (self.label, "text") <~ self.buttonStream!
         
         // REACT: button ~> println
-        ^{ println($0!) } <~ self.buttonSignal!
+        ^{ println($0!) } <~ self.buttonStream!
     }
     
     func _setupBarButtonItem()
     {
-//        self.barButtonSignal = self.barButtonItem?.signal("OK")
-        self.barButtonSignal = self.barButtonItem?.signal { _ in "BarButton \(arc4random_uniform(UInt32.max))" }
+//        self.barButtonStream = self.barButtonItem?.stream("OK")
+        self.barButtonStream = self.barButtonItem?.stream { _ in "BarButton \(arc4random_uniform(UInt32.max))" }
         
         // REACT: button ~> label
-        (self.label, "text") <~ self.barButtonSignal!
+        (self.label, "text") <~ self.barButtonStream!
         
         // REACT: button ~> println
-        ^{ println($0!) } <~ self.barButtonSignal!
+        ^{ println($0!) } <~ self.barButtonStream!
     }
 }
