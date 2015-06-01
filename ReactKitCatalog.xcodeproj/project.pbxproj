@@ -16,6 +16,7 @@
 		1F3EFFA619DEF3FD0004CD7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3EFF9F19DEF3FD0004CD7D /* Images.xcassets */; };
 		1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFA119DEF3FD0004CD7D /* MasterViewController.swift */; };
 		1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */; };
+		1F6E76841B1BB98A00BB9D32 /* IncrementalSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E76831B1BB98A00BB9D32 /* IncrementalSearchViewController.swift */; };
 		1F79711419E41A6E0067A4C4 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F79711219E41A6E0067A4C4 /* TimerViewController.swift */; };
 		1F79711519E41A6E0067A4C4 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F79711319E41A6E0067A4C4 /* TimerViewController.xib */; };
 		1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A4FC519E29DEF0073250E /* GestureViewController.swift */; };
@@ -334,6 +335,7 @@
 		1F3EFFA019DEF3FD0004CD7D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F3EFFA119DEF3FD0004CD7D /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		1F3EFFAB19DEF8D00004CD7D /* TextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
+		1F6E76831B1BB98A00BB9D32 /* IncrementalSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementalSearchViewController.swift; sourceTree = "<group>"; };
 		1F79711219E41A6E0067A4C4 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		1F79711319E41A6E0067A4C4 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 		1F7A4FC519E29DEF0073250E /* GestureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				1F3E42251AB1DF8100BA6C97 /* ArrayKVOViewModel.swift */,
 				488B1E131AAD225B0083A5AF /* ArrayKVOViewController.swift */,
 				488B1E141AAD225B0083A5AF /* ArrayKVOViewController.xib */,
+				1F6E76831B1BB98A00BB9D32 /* IncrementalSearchViewController.swift */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -1030,6 +1033,7 @@
 			files = (
 				1F7A4FCE19E2A5350073250E /* Catalog.swift in Sources */,
 				48E649551ACA33700076E37A /* ArrayKVOViewController.swift in Sources */,
+				1F6E76841B1BB98A00BB9D32 /* IncrementalSearchViewController.swift in Sources */,
 				480E83E91ABB9B0D00AF8346 /* Helper.swift in Sources */,
 				486BC52919E3EB1F0094587F /* ButtonViewController.swift in Sources */,
 				1F7A4FC719E29DEF0073250E /* GestureViewController.swift in Sources */,

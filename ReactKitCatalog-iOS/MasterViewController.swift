@@ -78,9 +78,16 @@ class MasterViewController: UITableViewController
         //
         let className = NSStringFromClass(catalog.class_).componentsSeparatedByString(".").last
         
-        if let className = className {
+        if var className = className {
+            let newVC: UIViewController
+            if catalog.hasXib {
+                newVC = catalog.class_(nibName: className, bundle: nil)
+            }
+            else {
+                newVC = catalog.class_()
+            }
             
-            let newVC = catalog.class_(nibName: className, bundle: nil)
+//            let newVC = catalog.class_(nibName: className, bundle: nil)
             let newNavC = UINavigationController(rootViewController: newVC)
             self.splitViewController?.showDetailViewController(newNavC, sender: self)
             

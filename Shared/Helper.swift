@@ -8,6 +8,10 @@
 
 import Foundation
 import Dollar
+import SwiftTask
+import Alamofire
+import SwiftyJSON
+
 
 // pick `count` random elements from `sequence`
 func _pickRandom<S: SequenceType>(sequence: S, count: Int) -> [S.Generator.Element]
@@ -33,4 +37,35 @@ let dateFormatter: NSDateFormatter = {
 func _dateString(date: NSDate) -> String
 {
     return dateFormatter.stringFromDate(date)
+}
+
+/// analogous to JavaScript's `$.getJSON(requestUrl)` using Alamofire & SwiftyJSON
+func _requestTask(request: Alamofire.Request) -> Task<Void, SwiftyJSON.JSON, NSError>
+{
+    let urlString = request.request.URLString
+    
+    return Task<Void, SwiftyJSON.JSON, NSError> { fulfill, reject in
+        
+        println("request to \(urlString)")
+        
+        request.responseJSON { request, response, jsonObject, error in
+            
+            println("response from \(urlString)")
+            
+            if let error = error {
+                reject(error)
+                return
+            }
+            
+            Async.background {
+                let json = JSON(jsonObject!)
+                
+                Async.main {
+                    fulfill(json)
+                }
+            }
+            
+        }
+        return
+    }
 }

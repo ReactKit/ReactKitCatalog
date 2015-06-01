@@ -52,7 +52,7 @@ class WhoToFollowViewController: UIViewController {
                 let since = Int(arc4random_uniform(500))
                 return Alamofire.request(.GET, "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
             }
-            |> flatMap { [weak self] in Stream<SwiftyJSON.JSON>.fromTask(self!._requestTask($0)) }
+            |> flatMap { Stream<SwiftyJSON.JSON>.fromTask(_requestTask($0)) }
         
         typealias UserDict = [String : AnyObject]
         
@@ -76,8 +76,7 @@ class WhoToFollowViewController: UIViewController {
                         return nil
                     }
                 }
-                |> merge(refreshButtonStream
-                    |> map { _ in nil })
+                |> merge(refreshButtonStream |> map { _ in nil })
             
         }
         let randomUser1Stream = createRandomUserStream(user1ButtonStream)
@@ -121,33 +120,5 @@ class WhoToFollowViewController: UIViewController {
         
     }
     
-    /// analogous to JavaScript's `$.getJSON(requestUrl)` using Alamofire & SwiftyJSON
-    func _requestTask(request: Alamofire.Request) -> Task<Void, SwiftyJSON.JSON, NSError>
-    {
-        return Task<Void, SwiftyJSON.JSON, NSError> { fulfill, reject in
-            
-            println("request to GitHub")
-
-            request.responseJSON { request, response, jsonObject, error in
-                
-                println("response (JSON) from Github")
-                
-                if let error = error {
-                    reject(error)
-                    return
-                }
-                
-                Async.background {
-                    let json = JSON(jsonObject!)
-                    
-                    Async.main {
-                        fulfill(json)
-                    }
-                }
-                
-            }
-            return
-        }
-    }
     
 }

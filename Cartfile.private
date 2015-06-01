@@ -1,5 +1,6 @@
-github "ReactKit/ReactKit" ~> 0.10.0
-github "ReactKit/ReactKitCalculator" ~> 0.2.0
+github "ReactKit/ReactKitCalculator" ~> 0.2.1
+#github "ReactKit/ReactKit" ~> 0.11.0
+#github "ReactKit/SwiftTask" ~> 3.3.0
 
 github "Alamofire/Alamofire" ~> 1.2.1
 github "SwiftyJSON/SwiftyJSON" ~> 2.2.0
