@@ -13,7 +13,8 @@ import SwiftyJSON
 
 private func _searchUrl(query: String) -> String
 {
-    return "http://api.bing.com/osjson.aspx?query=\(query)"
+    var escapedQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? ""
+    return "http://api.bing.com/osjson.aspx?query=\(escapedQuery)"
 }
 
 private let _reuseIdentifier = "reuseIdentifier"
