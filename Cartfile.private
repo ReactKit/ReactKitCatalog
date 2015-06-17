@@ -1,10 +1,10 @@
 github "ReactKit/ReactKitCalculator" ~> 0.2.1
-#github "ReactKit/ReactKit" ~> 0.11.0
+github "ReactKit/ReactKit" "37ad0a1" # "no-embed-framework"
 #github "ReactKit/SwiftTask" ~> 3.3.0
 
-github "Alamofire/Alamofire" ~> 1.2.1
+github "Alamofire/Alamofire" ~> 1.2.3
 github "SwiftyJSON/SwiftyJSON" ~> 2.2.0
 github "duemunk/Async" "ceb4051b248787cc860dd0e7169b1386e29345cf" # NOTE: 1.2.0 pre
-github "ankurp/Dollar.swift" ~> 3.0.0
+github "ankurp/Dollar.swift" ~> 3.0.2
 github "Haneke/HanekeSwift" ~> 0.9.1
 github "marcelofabri/BigBrother" ~> 0.2.0
