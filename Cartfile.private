@@ -1,5 +1,5 @@
-github "ReactKit/ReactKitCalculator" ~> 0.2.1
-github "ReactKit/ReactKit" "37ad0a1" # "no-embed-framework"
+github "ReactKit/ReactKitCalculator" ~> 0.2.2
+#github "ReactKit/ReactKit" ~> 0.11.1
 #github "ReactKit/SwiftTask" ~> 3.3.0
 
 github "Alamofire/Alamofire" ~> 1.2.3
