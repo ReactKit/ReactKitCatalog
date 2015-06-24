@@ -28,8 +28,8 @@ class MultipleTextFieldViewController: UIViewController
     
     var buttonEnablingStream: Stream<NSNumber?>?
     var buttonEnablingStream2: Stream<[AnyObject?]>?
-    var errorMessagingStream: Stream<NSString?>?
-    var buttonTappedStream: Stream<NSString?>?
+    var errorMessagingStream: Stream<String?>?
+    var buttonTappedStream: Stream<String?>?
     
     override func viewDidLoad()
     {
@@ -63,15 +63,15 @@ class MultipleTextFieldViewController: UIViewController
         self.buttonEnablingStream = combinedTextStream
             |> map { (values, changedValue) -> NSNumber? in
                 
-                let username: NSString? = values[0] ?? nil
-                let email: NSString? = values[1] ?? nil
-                let password: NSString? = values[2] ?? nil
-                let password2: NSString? = values[3] ?? nil
+                let username = (values[0] ?? nil) ?? ""
+                let email = (values[1] ?? nil) ?? ""
+                let password = (values[2] ?? nil) ?? ""
+                let password2 = (values[3] ?? nil) ?? ""
                 
                 println("username=\(username), email=\(email), password=\(password), password2=\(password2)")
                 
                 // validation
-                let buttonEnabled = username?.length > 0 && email?.length > 0 && password?.length >= MIN_PASSWORD_LENGTH && password == password2
+                let buttonEnabled = count(username) > 0 && count(email) > 0 && count(password) >= MIN_PASSWORD_LENGTH && password == password2
                 
                 println("buttonEnabled = \(buttonEnabled)")
                 
@@ -80,20 +80,20 @@ class MultipleTextFieldViewController: UIViewController
         
         // create error-messaging stream via any textField change
         self.errorMessagingStream = combinedTextStream
-            |> map { (values, changedValue) -> NSString? in
+            |> map { (values, changedValue) -> String? in
             
-                let username: NSString? = values[0] ?? nil
-                let email: NSString? = values[1] ?? nil
-                let password: NSString? = values[2] ?? nil
-                let password2: NSString? = values[3] ?? nil
+                let username = (values[0] ?? nil) ?? ""
+                let email = (values[1] ?? nil) ?? ""
+                let password = (values[2] ?? nil) ?? ""
+                let password2 = (values[3] ?? nil) ?? ""
                 
-                if username?.length <= 0 {
+                if count(username) <= 0 {
                     return "Username is not set."
                 }
-                else if email?.length <= 0 {
+                else if count(email) <= 0 {
                     return "Email is not set."
                 }
-                else if password?.length < MIN_PASSWORD_LENGTH {
+                else if count(password) < MIN_PASSWORD_LENGTH {
                     return "Password requires at least \(MIN_PASSWORD_LENGTH) characters."
                 }
                 else if password != password2 {
@@ -131,7 +131,7 @@ class MultipleTextFieldViewController: UIViewController
         (self.messageLabel, "text") <~ self.errorMessagingStream!
         
         // REACT: button tap
-        self.buttonTappedStream! ~> { [weak self] (value: NSString?) -> Void in
+        self.buttonTappedStream! ~> { [weak self] (value: String?) -> Void in
             if let self_ = self {
                 if value == "OK" {
                     // release all streams when receiving "OK" stream

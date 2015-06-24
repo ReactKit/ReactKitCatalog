@@ -16,9 +16,9 @@ class TextFieldViewController: UIViewController
     @IBOutlet var debounceLabel: UILabel!
     @IBOutlet var textField: UITextField!
     
-    var stream: Stream<NSString?>?
-    var throttleStream: Stream<NSString?>?
-    var debounceStream: Stream<NSString?>?
+    var stream: Stream<String?>?
+    var throttleStream: Stream<String?>?
+    var debounceStream: Stream<String?>?
     
     override func viewDidLoad()
     {
@@ -27,10 +27,10 @@ class TextFieldViewController: UIViewController
         self.stream = self.textField?.textChangedStream()
         self.throttleStream = self.stream!
             |> throttle(1)
-            |> map { text -> NSString? in "\(text!) (throttled)" }
+            |> map { text -> String? in "\(text!) (throttled)" }
         self.debounceStream = self.stream!
             |> debounce(1)
-            |> map { text -> NSString? in "\(text!) (debounced)" }
+            |> map { text -> String? in "\(text!) (debounced)" }
         
         // REACT: textField ~> label
         (self.label, "text") <~ self.stream!

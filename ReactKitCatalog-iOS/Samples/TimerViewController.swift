@@ -15,14 +15,14 @@ class TimerViewController: UIViewController
     @IBOutlet var pauseResumeButton: UIButton!
     @IBOutlet var cancelButton: UIButton!
     
-    var stream: Stream<NSString?>?
+    var stream: Stream<String?>?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         // NOTE: use class method (no need to create NSTimer-instance)
-        self.stream = NSTimer.stream(timeInterval: 1) { (sender: NSTimer?) -> NSString? in
+        self.stream = NSTimer.stream(timeInterval: 1) { (sender: NSTimer?) -> String? in
             return "\(NSDate())"
         }
         

@@ -14,7 +14,7 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
     @IBOutlet var gestures: [UIGestureRecognizer]!
     @IBOutlet var label: UILabel!
     
-    var streams: [Stream<NSString?>] = []
+    var streams: [Stream<String?>] = []
     
     override func viewDidLoad()
     {
@@ -25,7 +25,7 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
             gesture.delegate = self
             let gestureClassName = NSStringFromClass(gesture.dynamicType)
             
-            let stream: Stream<NSString?> = gesture.stream { gesture -> NSString? in
+            let stream: Stream<String?> = gesture.stream { gesture -> String? in
                 // e.g. UITapGestureRecognizer state=3 (161.0,325.0)
                 return "\(gestureClassName) state=\(gesture!.state.rawValue) \(gesture!.locationInView(gesture?.view))"
             }
@@ -40,10 +40,10 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
         // combinedStream (concatenating above stream-strings)
         let combinedStream = self.streams
             |> merge2All
-            |> map { (values: [NSString??], changedValue: NSString?) -> NSString? in
+            |> map { (values: [String??], changedValue: String?) -> String? in
             
             return "\n"
-                .join(values.map { ($0 ?? "")!! as String }
+                .join(values.map { ($0 ?? "")!! }
                 .filter { !$0.isEmpty })
         }
         

@@ -39,7 +39,7 @@ class WhoToFollowViewController: UIViewController {
     
     func _setupButtons()
     {
-        let refreshButtonStream: Stream<NSString?> = self.refreshButton!.buttonStream("refresh")
+        let refreshButtonStream: Stream<String?> = self.refreshButton!.buttonStream("refresh")
         
         let user1ButtonStream = self.user1Button!.buttonStream(1)
         let user2ButtonStream = self.user2Button!.buttonStream(2)

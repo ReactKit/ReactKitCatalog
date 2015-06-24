@@ -15,8 +15,8 @@ class ButtonViewController: UIViewController
     @IBOutlet var button: UIButton!
     @IBOutlet var barButtonItem: UIBarButtonItem!
     
-    var buttonStream: Stream<NSString?>?
-    var barButtonStream: Stream<NSString?>?
+    var buttonStream: Stream<String?>?
+    var barButtonStream: Stream<String?>?
     
     override func viewDidLoad()
     {
