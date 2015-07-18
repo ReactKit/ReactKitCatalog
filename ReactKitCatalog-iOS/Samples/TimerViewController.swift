@@ -29,8 +29,8 @@ class TimerViewController: UIViewController
         // REACT: button ~> label
         (self.label, "text") <~ self.stream!
         
-        // REACT: button ~> println
-        ^{ println($0!) } <~ self.stream!
+        // REACT: button ~> print
+        ^{ print($0!) } <~ self.stream!
     }
     
     override func viewDidDisappear(animated: Bool)
@@ -41,9 +41,9 @@ class TimerViewController: UIViewController
             case .Cancelled:
                 break
             default:
-                println()
-                println("NOTE: TimerViewController is not deinited yet (due to iOS8-UISplitViewController's behavior) so timer-stream is still alive.")
-                println()
+                print("")
+                print("NOTE: TimerViewController is not deinited yet (due to iOS8-UISplitViewController's behavior) so timer-stream is still alive.")
+                print("")
         }
     }
     
@@ -60,7 +60,7 @@ class TimerViewController: UIViewController
                 self.stream?.pause()
                 button.setTitle("Resume", forState: .Normal)
             default:
-                println("Do nothing (timer-stream is already cancelled)")
+                print("Do nothing (timer-stream is already cancelled)")
                 break
         }
         

@@ -13,8 +13,8 @@ import SwiftyJSON
 
 private func _searchUrl(query: String) -> String
 {
-    var escapedQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? ""
-    return "http://api.bing.com/osjson.aspx?query=\(escapedQuery)"
+    let escapedQuery = query.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? ""
+    return "https://api.bing.com/osjson.aspx?query=\(escapedQuery)"
 }
 
 private let _reuseIdentifier = "reuseIdentifier"
@@ -44,18 +44,18 @@ class IncrementalSearchViewController: UITableViewController, UISearchBarDelegat
         self.searchController = searchController
         
         self.searchResultStream = KVO.stream(self, "searchText")
-//            |> peek(println)
+//            |> peek(print)
             |> debounce(0.15)
             |> map { ($0 as? String) ?? "" }    // map to Equatable String for `distinctUntilChanged()`
             |> distinctUntilChanged
             |> map { query -> Stream<JSON> in
-                let request = Alamofire.request(.GET, _searchUrl(query), parameters: nil, encoding: .URL)
+                let request = Alamofire.request(.GET, URLString: _searchUrl(query), parameters: nil, encoding: .URL)
                 return Stream<JSON>.fromTask(_requestTask(request))
             }
             |> switchLatestInner
     
         // REACT
-        self.searchResultStream! ~> println
+        self.searchResultStream! ~> print
         
         // REACT
         self.searchResultStream! ~> { [weak self] json in
@@ -85,7 +85,7 @@ class IncrementalSearchViewController: UITableViewController, UISearchBarDelegat
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(_reuseIdentifier, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(_reuseIdentifier, forIndexPath: indexPath)
         
         cell.textLabel?.text = self.searchResult?[indexPath.row]
         

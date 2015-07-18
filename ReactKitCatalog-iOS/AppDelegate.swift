@@ -8,7 +8,7 @@
 
 import UIKit
 import Alamofire
-import BigBrother
+//import BigBrother
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -29,9 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+        // 2015/07/18 comment-out: BigBrother not working in Swift 2 (Xcode7-beta3)
         // setup BigBrother (networkActivityIndicator)
-        BigBrother.addToSharedSession()
-        BigBrother.addToSessionConfiguration(Alamofire.Manager.sharedInstance.session.configuration)
+//        BigBrother.addToSharedSession()
+//        BigBrother.addToSessionConfiguration(Alamofire.Manager.sharedInstance.session.configuration)
         
         self._setupAppearance()
         
@@ -54,7 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         return true
     }
     
-    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController!, ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool
+    func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController, ontoPrimaryViewController primaryViewController:UIViewController) -> Bool
     {
         return true
     }

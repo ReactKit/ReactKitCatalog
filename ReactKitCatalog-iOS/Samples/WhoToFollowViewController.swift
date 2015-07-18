@@ -50,7 +50,7 @@ class WhoToFollowViewController: UIViewController {
             |> startWith("refresh on start")
             |> map { _ -> Alamofire.Request in
                 let since = Int(arc4random_uniform(500))
-                return Alamofire.request(.GET, "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
+                return Alamofire.request(.GET, URLString: "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
             }
             |> flatMap { Stream<SwiftyJSON.JSON>.fromTask(_requestTask($0)) }
         
@@ -109,13 +109,13 @@ class WhoToFollowViewController: UIViewController {
         
         // REACT: userButton ~> re-render
         randomUser1Stream ~> { [weak self] userDict in
-            renderUserButton(self?.user1Button, userDict)
+            renderUserButton(self?.user1Button, userDict: userDict)
         }
         randomUser2Stream ~> { [weak self] userDict in
-            renderUserButton(self?.user2Button, userDict)
+            renderUserButton(self?.user2Button, userDict: userDict)
         }
         randomUser3Stream ~> { [weak self] userDict in
-            renderUserButton(self?.user3Button, userDict)
+            renderUserButton(self?.user3Button, userDict: userDict)
         }
         
     }

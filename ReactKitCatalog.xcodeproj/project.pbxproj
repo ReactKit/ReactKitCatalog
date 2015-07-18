@@ -42,8 +42,6 @@
 		1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FA369B81A6FEC5C008F2F38 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; };
 		1FA369B91A6FEC5C008F2F38 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1FCC3FC51A77D7B200303043 /* BigBrother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC3FB61A77D77E00303043 /* BigBrother.framework */; };
-		1FCC3FC61A77D7B200303043 /* BigBrother.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC3FB61A77D77E00303043 /* BigBrother.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */; };
 		1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */; };
 		1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC652C1A5AC83500DBC837 /* Async.swift */; };
@@ -142,27 +140,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 030B6CC31A6E16E800C2D4F1;
 			remoteInfo = "SwiftyJSON OSX";
-		};
-		1FCC3FB51A77D77E00303043 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D49921691A5612D800B38954;
-			remoteInfo = BigBrother;
-		};
-		1FCC3FB71A77D77E00303043 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D49921741A5612D800B38954;
-			remoteInfo = BigBrotherTests;
-		};
-		1FCC3FC71A77D7B200303043 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D49921681A5612D800B38954;
-			remoteInfo = BigBrother;
 		};
 		1FCC65111A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -313,7 +290,6 @@
 				1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */,
 				1FA369AD1A6FEC49008F2F38 /* Alamofire.framework in Embed Frameworks */,
 				1FA369A91A6FEC44008F2F38 /* SwiftTask.framework in Embed Frameworks */,
-				1FCC3FC61A77D7B200303043 /* BigBrother.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +324,6 @@
 		1F85641F1A94C6DB00103F01 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTextFieldViewController.swift; sourceTree = "<group>"; };
 		1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleTextFieldViewController.xib; sourceTree = "<group>"; };
-		1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = BigBrother.xcodeproj; sourceTree = "<group>"; };
 		1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoToFollowViewController.swift; sourceTree = "<group>"; };
 		1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoToFollowViewController.xib; sourceTree = "<group>"; };
 		1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -386,7 +361,6 @@
 				1FA369B41A6FEC56008F2F38 /* Dollar.framework in Frameworks */,
 				1FA369AC1A6FEC49008F2F38 /* Alamofire.framework in Frameworks */,
 				1FA369A81A6FEC44008F2F38 /* SwiftTask.framework in Frameworks */,
-				1FCC3FC51A77D7B200303043 /* BigBrother.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,23 +489,6 @@
 			path = ReactKitCalculatorDemo;
 			sourceTree = "<group>";
 		};
-		1FCC3F941A77D77E00303043 /* BigBrother */ = {
-			isa = PBXGroup;
-			children = (
-				1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */,
-			);
-			path = BigBrother;
-			sourceTree = "<group>";
-		};
-		1FCC3F9E1A77D77E00303043 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1FCC3FB61A77D77E00303043 /* BigBrother.framework */,
-				1FCC3FB81A77D77E00303043 /* BigBrotherTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1FCC64871A5AC44D00DBC837 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,7 +579,6 @@
 				1FCC65291A5AC83500DBC837 /* Async */,
 				1FCC656A1A5ACDAA00DBC837 /* Dollar.swift */,
 				48DA20A51A5CAA8A00384E6C /* HanekeSwift */,
-				1FCC3F941A77D77E00303043 /* BigBrother */,
 			);
 			name = Checkouts;
 			path = Carthage/Checkouts;
@@ -723,7 +679,6 @@
 				1FA369B31A6FEC4F008F2F38 /* PBXTargetDependency */,
 				1FA369B71A6FEC56008F2F38 /* PBXTargetDependency */,
 				1FA369BB1A6FEC5C008F2F38 /* PBXTargetDependency */,
-				1FCC3FC81A77D7B200303043 /* PBXTargetDependency */,
 			);
 			name = "ReactKitCatalog-iOS";
 			productName = "ReactKitCatalog-iOS";
@@ -736,7 +691,9 @@
 		1F3EFED519DEF11B0004CD7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Yasuhiro Inami";
 				TargetAttributes = {
 					1F3EFF4D19DEF3460004CD7D = {
@@ -763,10 +720,6 @@
 				{
 					ProductGroup = 1FCC648C1A5AC44D00DBC837 /* Products */;
 					ProjectRef = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
-				},
-				{
-					ProductGroup = 1FCC3F9E1A77D77E00303043 /* Products */;
-					ProjectRef = 1FCC3F9D1A77D77E00303043 /* BigBrother.xcodeproj */;
 				},
 				{
 					ProductGroup = 1FCC658E1A5ACDAA00DBC837 /* Products */;
@@ -835,20 +788,6 @@
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
 			remoteRef = 1FAA78071AC7C67C00C11DA3 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1FCC3FB61A77D77E00303043 /* BigBrother.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = BigBrother.framework;
-			remoteRef = 1FCC3FB51A77D77E00303043 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1FCC3FB81A77D77E00303043 /* BigBrotherTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = BigBrotherTests.xctest;
-			remoteRef = 1FCC3FB71A77D77E00303043 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1FCC65121A5AC44D00DBC837 /* Alamofire.framework */ = {
@@ -1087,11 +1026,6 @@
 			name = Haneke;
 			targetProxy = 1FA369BA1A6FEC5C008F2F38 /* PBXContainerItemProxy */;
 		};
-		1FCC3FC81A77D7B200303043 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BigBrother;
-			targetProxy = 1FCC3FC71A77D7B200303043 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1141,6 +1075,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1209,6 +1144,7 @@
 				INFOPLIST_FILE = "ReactKitCatalog-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1221,6 +1157,7 @@
 				INFOPLIST_FILE = "ReactKitCatalog-OSX/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1229,6 +1166,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1238,7 +1176,9 @@
 				INFOPLIST_FILE = "ReactKitCatalog-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1248,12 +1188,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "ReactKitCatalog-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.inamiy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

@@ -41,7 +41,7 @@ class TextFieldViewController: UIViewController
         // REACT: textField ~> debounceLabel
         (self.debounceLabel, "text") <~ self.debounceStream!
         
-//        // REACT: textField ~> println
-//        ^{ println($0!) } <~ self.stream!
+//        // REACT: textField ~> print
+//        ^{ print($0!) } <~ self.stream!
     }
 }

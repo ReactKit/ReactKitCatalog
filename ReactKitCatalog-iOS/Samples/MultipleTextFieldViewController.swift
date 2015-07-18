@@ -68,12 +68,12 @@ class MultipleTextFieldViewController: UIViewController
                 let password = (values[2] ?? nil) ?? ""
                 let password2 = (values[3] ?? nil) ?? ""
                 
-                println("username=\(username), email=\(email), password=\(password), password2=\(password2)")
+                print("username=\(username), email=\(email), password=\(password), password2=\(password2)")
                 
                 // validation
-                let buttonEnabled = count(username) > 0 && count(email) > 0 && count(password) >= MIN_PASSWORD_LENGTH && password == password2
+                let buttonEnabled = username.characters.count > 0 && email.characters.count > 0 && password.characters.count >= MIN_PASSWORD_LENGTH && password == password2
                 
-                println("buttonEnabled = \(buttonEnabled)")
+                print("buttonEnabled = \(buttonEnabled)")
                 
                 return NSNumber(bool: buttonEnabled)    // NOTE: use NSNumber because KVO does not understand Bool
             }
@@ -87,13 +87,13 @@ class MultipleTextFieldViewController: UIViewController
                 let password = (values[2] ?? nil) ?? ""
                 let password2 = (values[3] ?? nil) ?? ""
                 
-                if count(username) <= 0 {
+                if username.characters.count <= 0 {
                     return "Username is not set."
                 }
-                else if count(email) <= 0 {
+                else if email.characters.count <= 0 {
                     return "Email is not set."
                 }
-                else if count(password) < MIN_PASSWORD_LENGTH {
+                else if password.characters.count < MIN_PASSWORD_LENGTH {
                     return "Password requires at least \(MIN_PASSWORD_LENGTH) characters."
                 }
                 else if password != password2 {
@@ -111,13 +111,13 @@ class MultipleTextFieldViewController: UIViewController
         //--------------------------------------------------
         
         self.buttonEnablingStream?.then { value, errorInfo -> Void in
-            println("buttonEnablingStream finished")
+            print("buttonEnablingStream finished")
         }
         self.errorMessagingStream?.then { value, errorInfo -> Void in
-            println("errorMessagingStream finished")
+            print("errorMessagingStream finished")
         }
         self.buttonTappedStream?.then { value, errorInfo -> Void in
-            println("buttonTappedStream finished")
+            print("buttonTappedStream finished")
         }
         
         //--------------------------------------------------

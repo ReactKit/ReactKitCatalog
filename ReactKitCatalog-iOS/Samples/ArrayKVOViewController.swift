@@ -34,7 +34,7 @@ class ArrayKVOViewController: UITableViewController
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    required init(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
         self.viewModel = ArrayKVOViewModel()
         
@@ -43,7 +43,7 @@ class ArrayKVOViewController: UITableViewController
     
     deinit
     {
-//        println("[deinit] \(self)")
+//        print("[deinit] \(self)")
     }
     
     override func viewDidLoad()
@@ -75,8 +75,8 @@ class ArrayKVOViewController: UITableViewController
         // REACT: insert button
         let insertButtonStream = self.insertButtonItem.stream().ownedBy(self)
         insertButtonStream ~> { [unowned self] _ in
-            println()
-            println("[insert button]")
+            print()
+            print("[insert button]")
             
             self.viewModel.insertRandomSectionsOrRows()
         }
@@ -84,8 +84,8 @@ class ArrayKVOViewController: UITableViewController
         // REACT: replace button
         let replaceButtonStream = self.replaceButtonItem.stream().ownedBy(self)
         replaceButtonStream ~> { [unowned self] _ in
-            println()
-            println("[replace button]")
+            print()
+            print("[replace button]")
             
             self.viewModel.replaceRandomSectionsOrRows()
         }
@@ -93,8 +93,8 @@ class ArrayKVOViewController: UITableViewController
         // REACT: remove button
         let removeButtonStream = self.removeButtonItem.stream().ownedBy(self)
         removeButtonStream ~> { [unowned self] _ in
-            println()
-            println("[remove button]")
+            print()
+            print("[remove button]")
             
             self.viewModel.removeRandomSectionsOrRows()
         }
@@ -102,8 +102,8 @@ class ArrayKVOViewController: UITableViewController
         // REACT: decrement button
         let decrementButtonStream = self.decrementButtonItem.stream().ownedBy(self)
         decrementButtonStream ~> { [unowned self] _ in
-            println()
-            println("[decrement button]")
+            print()
+            print("[decrement button]")
             
             self.viewModel.changeMaxCount = max(self.viewModel.changeMaxCount-1, 1)
         }
@@ -111,8 +111,8 @@ class ArrayKVOViewController: UITableViewController
         // REACT: increment button
         let incrementButtonStream = self.incrementButtonItem.stream().ownedBy(self)
         incrementButtonStream ~> { [unowned self] _ in
-            println()
-            println("[increment button]")
+            print()
+            print("[increment button]")
             
             self.viewModel.changeMaxCount = min(self.viewModel.changeMaxCount+1, Int.max)
         }
@@ -120,8 +120,8 @@ class ArrayKVOViewController: UITableViewController
         // REACT: section/row toggle button
         let toggleButtonStream = self.toggleButtonItem.stream().ownedBy(self)
         toggleButtonStream ~> { [unowned self] _ in
-            println()
-            println("[toggle button]")
+            print()
+            print("[toggle button]")
             
             self.viewModel.tableLocation.toggle()
         }
@@ -141,11 +141,11 @@ class ArrayKVOViewController: UITableViewController
         let sectionDatasChangedStream = self.viewModel.sectionDatas.stream().ownedBy(self.viewModel)
         sectionDatasChangedStream ~> { [unowned self] sectionDatas, sectionChange, sectionIndexSet in
             
-            println()
-            println("[sectionDatas changed]")
-            println("sectionChange = \(sectionChange)")
-            println("sectionDatas = \(sectionDatas ?? [])")
-            println("sectionIndexSet = \(sectionIndexSet)")
+            print()
+            print("[sectionDatas changed]")
+            print("sectionChange = \(sectionChange)")
+            print("sectionDatas = \(sectionDatas ?? [])")
+            print("sectionIndexSet = \(sectionIndexSet)")
             
             if sectionChange == .Insertion || sectionChange == .Replacement {
                 
@@ -160,11 +160,11 @@ class ArrayKVOViewController: UITableViewController
                         let sectionData: SectionData! = sectionData // strongify
                         if sectionData == nil { return }
                         
-                        println()
-                        println("[rowDatas changed]")
-                        println("rowChange = \(rowChange)")
-                        println("rowDatas = \(rowDatas ?? [])")
-                        println("rowIndexSet = \(rowIndexSet)")
+                        print()
+                        print("[rowDatas changed]")
+                        print("rowChange = \(rowChange)")
+                        print("rowDatas = \(rowDatas ?? [])")
+                        print("rowIndexSet = \(rowIndexSet)")
                         
                         // NOTE: sectionIndex needs to be re-evaluated on rows changed
                         let sectionIndex = self.viewModel.sectionDatas.proxy.indexOfObject(sectionData)
@@ -217,7 +217,7 @@ class ArrayKVOViewController: UITableViewController
         let step = 0.5 // sec
         
         Async.main(after: 0.2 + step * 0) {
-            println("*** addObject (section & row) ***")
+            print("*** addObject (section & row) ***")
             
             self.viewModel.sectionDatas.proxy.addObject(SectionData(title: "Section 1", rowDataArray: [
                 RowData(title: "title 1-0"),
@@ -226,7 +226,7 @@ class ArrayKVOViewController: UITableViewController
         }
         
         Async.main(after: 0.2 + step * 1) {
-            println("*** insertObject ***")
+            print("*** insertObject ***")
             
             self.viewModel.sectionDatas.proxy.insertObject(SectionData(title: "Section 0", rowDataArray: [
                 RowData(title: "title 0-0")
@@ -234,7 +234,7 @@ class ArrayKVOViewController: UITableViewController
         }
         
         Async.main(after: 0.2 + step * 2) {
-            println("*** replaceObjectAtIndex ***")
+            print("*** replaceObjectAtIndex ***")
             
             self.viewModel.sectionDatas.proxy.replaceObjectAtIndex(0, withObject: SectionData(title: "Section 0b", rowDataArray: [
                 RowData(title: "title 0-1b")
@@ -242,13 +242,13 @@ class ArrayKVOViewController: UITableViewController
         }
         
         Async.main(after: 0.2 + step * 3) {
-            println("*** removeObjectAtIndex ***")
+            print("*** removeObjectAtIndex ***")
             
             self.viewModel.sectionDatas.proxy.removeObjectAtIndex(0)
         }
         
         Async.main(after: 0.2 + step * 4) {
-            println("*** addObject (row) ***")
+            print("*** addObject (row) ***")
             
             let sectionData = self.viewModel.sectionDatas.proxy[0] as! SectionData
             sectionData.rowDatas.proxy.addObject(RowData(title: "title 1-2"))
@@ -272,7 +272,7 @@ class ArrayKVOViewController: UITableViewController
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(CELL_IDENTIFIER, forIndexPath: indexPath)
         
         cell.textLabel?.text = self.viewModel.sectionDatas.proxy[indexPath.section][indexPath.row].title
 

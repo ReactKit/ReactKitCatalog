@@ -49,7 +49,7 @@ class MasterViewController: UITableViewController
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
         let catalog = self.catalogs[indexPath.row]
         cell.textLabel?.text = catalog.title
@@ -78,13 +78,13 @@ class MasterViewController: UITableViewController
         //
         let className = NSStringFromClass(catalog.class_).componentsSeparatedByString(".").last
         
-        if var className = className {
+        if let className = className {
             let newVC: UIViewController
             if catalog.hasXib {
-                newVC = catalog.class_(nibName: className, bundle: nil)
+                newVC = catalog.class_.init(nibName: className, bundle: nil)
             }
             else {
-                newVC = catalog.class_()
+                newVC = catalog.class_.init()
             }
             
 //            let newVC = catalog.class_(nibName: className, bundle: nil)

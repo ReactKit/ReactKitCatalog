@@ -14,7 +14,7 @@ import SwiftyJSON
 
 
 // pick `count` random elements from `sequence`
-func _pickRandom<S: SequenceType>(sequence: S, count: Int) -> [S.Generator.Element]
+func _pickRandom<S: SequenceType>(sequence: S, _ count: Int) -> [S.Generator.Element]
 {
     var array = Array(sequence)
     var pickedArray = Array<S.Generator.Element>()
@@ -39,18 +39,25 @@ func _dateString(date: NSDate) -> String
     return dateFormatter.stringFromDate(date)
 }
 
-/// analogous to JavaScript's `$.getJSON(requestUrl)` using Alamofire & SwiftyJSON
-func _requestTask(request: Alamofire.Request) -> Task<Void, SwiftyJSON.JSON, NSError>
+enum CatalogError: String, ErrorType
 {
-    let urlString = request.request.URLString
+    case InvalidArgument
+}
+
+/// analogous to JavaScript's `$.getJSON(requestUrl)` using Alamofire & SwiftyJSON
+func _requestTask(request: Alamofire.Request) -> Task<Void, SwiftyJSON.JSON, ErrorType>
+{
+    guard let urlString = request.request?.URLString else {
+        return Task(error: CatalogError.InvalidArgument)
+    }
     
-    return Task<Void, SwiftyJSON.JSON, NSError> { fulfill, reject in
+    return Task { fulfill, reject in
         
-        println("request to \(urlString)")
+        print("request to \(urlString)")
         
         request.responseJSON { request, response, jsonObject, error in
             
-            println("response from \(urlString)")
+            print("response from \(urlString)")
             
             if let error = error {
                 reject(error)

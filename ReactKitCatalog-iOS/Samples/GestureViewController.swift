@@ -30,8 +30,8 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
                 return "\(gestureClassName) state=\(gesture!.state.rawValue) \(gesture!.locationInView(gesture?.view))"
             }
             
-            // REACT: gesture ~> println
-            ^{ println($0!) } <~ stream
+            // REACT: gesture ~> print
+            ^{ print($0!) } <~ stream
             
             self.streams += [stream]
             

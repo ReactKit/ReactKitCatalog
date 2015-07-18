@@ -238,7 +238,7 @@ extension ArrayKVOViewModel
     }
     
     // inner enum
-    enum TableLocation: String, Printable
+    enum TableLocation: String, CustomStringConvertible
     {
         case Section = "Section"
         case Row = "Row"

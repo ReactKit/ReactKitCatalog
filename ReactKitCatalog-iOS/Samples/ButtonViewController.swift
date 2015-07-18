@@ -34,8 +34,8 @@ class ButtonViewController: UIViewController
         // REACT: button ~> label
         (self.label, "text") <~ self.buttonStream!
         
-        // REACT: button ~> println
-        ^{ println($0!) } <~ self.buttonStream!
+        // REACT: button ~> print
+        ^{ print($0!) } <~ self.buttonStream!
     }
     
     func _setupBarButtonItem()
@@ -46,7 +46,7 @@ class ButtonViewController: UIViewController
         // REACT: button ~> label
         (self.label, "text") <~ self.barButtonStream!
         
-        // REACT: button ~> println
-        ^{ println($0!) } <~ self.barButtonStream!
+        // REACT: button ~> print
+        ^{ print($0!) } <~ self.barButtonStream!
     }
 }
