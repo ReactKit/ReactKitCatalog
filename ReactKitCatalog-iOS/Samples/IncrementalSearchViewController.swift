@@ -49,13 +49,13 @@ class IncrementalSearchViewController: UITableViewController, UISearchBarDelegat
             |> map { ($0 as? String) ?? "" }    // map to Equatable String for `distinctUntilChanged()`
             |> distinctUntilChanged
             |> map { query -> Stream<JSON> in
-                let request = Alamofire.request(.GET, URLString: _searchUrl(query), parameters: nil, encoding: .URL)
+                let request = Alamofire.request(.GET, _searchUrl(query), parameters: nil, encoding: .URL)
                 return Stream<JSON>.fromTask(_requestTask(request))
             }
             |> switchLatestInner
     
         // REACT
-        self.searchResultStream! ~> print
+        self.searchResultStream! ~> { print($0) }
         
         // REACT
         self.searchResultStream! ~> { [weak self] json in

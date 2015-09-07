@@ -9,6 +9,7 @@
 import UIKit
 import ReactKit
 import Dollar
+import Async
 
 let CELL_IDENTIFIER = "Cell"
 
@@ -75,7 +76,7 @@ class ArrayKVOViewController: UITableViewController
         // REACT: insert button
         let insertButtonStream = self.insertButtonItem.stream().ownedBy(self)
         insertButtonStream ~> { [unowned self] _ in
-            print()
+            print("")
             print("[insert button]")
             
             self.viewModel.insertRandomSectionsOrRows()
@@ -84,7 +85,7 @@ class ArrayKVOViewController: UITableViewController
         // REACT: replace button
         let replaceButtonStream = self.replaceButtonItem.stream().ownedBy(self)
         replaceButtonStream ~> { [unowned self] _ in
-            print()
+            print("")
             print("[replace button]")
             
             self.viewModel.replaceRandomSectionsOrRows()
@@ -93,7 +94,7 @@ class ArrayKVOViewController: UITableViewController
         // REACT: remove button
         let removeButtonStream = self.removeButtonItem.stream().ownedBy(self)
         removeButtonStream ~> { [unowned self] _ in
-            print()
+            print("")
             print("[remove button]")
             
             self.viewModel.removeRandomSectionsOrRows()
@@ -102,7 +103,7 @@ class ArrayKVOViewController: UITableViewController
         // REACT: decrement button
         let decrementButtonStream = self.decrementButtonItem.stream().ownedBy(self)
         decrementButtonStream ~> { [unowned self] _ in
-            print()
+            print("")
             print("[decrement button]")
             
             self.viewModel.changeMaxCount = max(self.viewModel.changeMaxCount-1, 1)
@@ -111,7 +112,7 @@ class ArrayKVOViewController: UITableViewController
         // REACT: increment button
         let incrementButtonStream = self.incrementButtonItem.stream().ownedBy(self)
         incrementButtonStream ~> { [unowned self] _ in
-            print()
+            print("")
             print("[increment button]")
             
             self.viewModel.changeMaxCount = min(self.viewModel.changeMaxCount+1, Int.max)
@@ -120,7 +121,7 @@ class ArrayKVOViewController: UITableViewController
         // REACT: section/row toggle button
         let toggleButtonStream = self.toggleButtonItem.stream().ownedBy(self)
         toggleButtonStream ~> { [unowned self] _ in
-            print()
+            print("")
             print("[toggle button]")
             
             self.viewModel.tableLocation.toggle()
@@ -141,7 +142,7 @@ class ArrayKVOViewController: UITableViewController
         let sectionDatasChangedStream = self.viewModel.sectionDatas.stream().ownedBy(self.viewModel)
         sectionDatasChangedStream ~> { [unowned self] sectionDatas, sectionChange, sectionIndexSet in
             
-            print()
+            print("")
             print("[sectionDatas changed]")
             print("sectionChange = \(sectionChange)")
             print("sectionDatas = \(sectionDatas ?? [])")
@@ -160,7 +161,7 @@ class ArrayKVOViewController: UITableViewController
                         let sectionData: SectionData! = sectionData // strongify
                         if sectionData == nil { return }
                         
-                        print()
+                        print("")
                         print("[rowDatas changed]")
                         print("rowChange = \(rowChange)")
                         print("rowDatas = \(rowDatas ?? [])")

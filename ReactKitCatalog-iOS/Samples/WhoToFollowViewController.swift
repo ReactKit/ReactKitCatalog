@@ -50,7 +50,7 @@ class WhoToFollowViewController: UIViewController {
             |> startWith("refresh on start")
             |> map { _ -> Alamofire.Request in
                 let since = Int(arc4random_uniform(500))
-                return Alamofire.request(.GET, URLString: "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
+                return Alamofire.request(.GET, "https://api.github.com/users", parameters: ["since" : since], encoding: .URL)
             }
             |> flatMap { Stream<SwiftyJSON.JSON>.fromTask(_requestTask($0)) }
         

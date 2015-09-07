@@ -42,9 +42,10 @@
 		1FA369B51A6FEC56008F2F38 /* Dollar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FCC65BF1A5ACDAB00DBC837 /* Dollar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FA369B81A6FEC5C008F2F38 /* Haneke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; };
 		1FA369B91A6FEC5C008F2F38 /* Haneke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48DA22621A5CAA8B00384E6C /* Haneke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1FC5246F1B9DFB3100853AC9 /* Async.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC5245E1B9DFA3F00853AC9 /* Async.framework */; };
+		1FC524701B9DFB3100853AC9 /* Async.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC5245E1B9DFA3F00853AC9 /* Async.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */; };
 		1FCC647A1A5AC17200DBC837 /* WhoToFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */; };
-		1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCC652C1A5AC83500DBC837 /* Async.swift */; };
 		480E83E81ABB9B0D00AF8346 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E83E71ABB9B0D00AF8346 /* Helper.swift */; };
 		480E83E91ABB9B0D00AF8346 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480E83E71ABB9B0D00AF8346 /* Helper.swift */; };
 		4845571E1A4CFFD0007770CA /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484556CF1A4CFFB2007770CA /* ReactKit.framework */; };
@@ -140,6 +141,34 @@
 			proxyType = 2;
 			remoteGlobalIDString = 030B6CC31A6E16E800C2D4F1;
 			remoteInfo = "SwiftyJSON OSX";
+		};
+		1FC524591B9DFA3F00853AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		1FC5245D1B9DFA3F00853AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC524521B9DFA3F00853AC9 /* Async.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF70E4E91ABF124A00B4FDD4;
+			remoteInfo = "Async iOS";
+		};
+		1FC5245F1B9DFA3F00853AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC524521B9DFA3F00853AC9 /* Async.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF41E41E1AC5FB2400A1DDB2;
+			remoteInfo = "Async OSX";
+		};
+		1FC524711B9DFB3100853AC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FC524521B9DFA3F00853AC9 /* Async.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BF70E4E81ABF124A00B4FDD4;
+			remoteInfo = "Async iOS";
 		};
 		1FCC65111A5AC44D00DBC837 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -284,6 +313,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				1FA369B11A6FEC4F008F2F38 /* SwiftyJSON.framework in Embed Frameworks */,
+				1FC524701B9DFB3100853AC9 /* Async.framework in Embed Frameworks */,
 				1F8563771A94BCA700103F01 /* ReactKitCalculator.framework in Embed Frameworks */,
 				1FA369A51A6FEC3F008F2F38 /* ReactKit.framework in Embed Frameworks */,
 				1FA369B91A6FEC5C008F2F38 /* Haneke.framework in Embed Frameworks */,
@@ -324,11 +354,11 @@
 		1F85641F1A94C6DB00103F01 /* CalculatorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalculatorViewController.xib; sourceTree = "<group>"; };
 		1F89DDAF19E2C97F00E89E32 /* MultipleTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleTextFieldViewController.swift; sourceTree = "<group>"; };
 		1F89DDB019E2C97F00E89E32 /* MultipleTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultipleTextFieldViewController.xib; sourceTree = "<group>"; };
+		1FC524521B9DFA3F00853AC9 /* Async.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Async.xcodeproj; sourceTree = "<group>"; };
 		1FCC64771A5AC17200DBC837 /* WhoToFollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoToFollowViewController.swift; sourceTree = "<group>"; };
 		1FCC64781A5AC17200DBC837 /* WhoToFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoToFollowViewController.xib; sourceTree = "<group>"; };
 		1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Alamofire.xcodeproj; sourceTree = "<group>"; };
 		1FCC64C71A5AC44D00DBC837 /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
-		1FCC652C1A5AC83500DBC837 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		1FCC658D1A5ACDAA00DBC837 /* Dollar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Dollar.xcodeproj; sourceTree = "<group>"; };
 		480E83E71ABB9B0D00AF8346 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		484555DC1A4CFFB1007770CA /* ReactKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ReactKit.xcodeproj; sourceTree = "<group>"; };
@@ -355,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA369B01A6FEC4F008F2F38 /* SwiftyJSON.framework in Frameworks */,
+				1FC5246F1B9DFB3100853AC9 /* Async.framework in Frameworks */,
 				1F8563761A94BCA700103F01 /* ReactKitCalculator.framework in Frameworks */,
 				1FA369A41A6FEC3F008F2F38 /* ReactKit.framework in Frameworks */,
 				1FA369B81A6FEC5C008F2F38 /* Haneke.framework in Frameworks */,
@@ -489,6 +520,15 @@
 			path = ReactKitCalculatorDemo;
 			sourceTree = "<group>";
 		};
+		1FC524531B9DFA3F00853AC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FC5245E1B9DFA3F00853AC9 /* Async.framework */,
+				1FC524601B9DFA3F00853AC9 /* Async.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1FCC64871A5AC44D00DBC837 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +542,7 @@
 			children = (
 				1FCC65121A5AC44D00DBC837 /* Alamofire.framework */,
 				1FA369921A6FEB35008F2F38 /* Alamofire.framework */,
+				1FC5245A1B9DFA3F00853AC9 /* Alamofire.framework */,
 				1FCC65141A5AC44D00DBC837 /* Alamofire iOS Tests.xctest */,
 				489B28A91A80516100450D18 /* Alamofire OSX Tests.xctest */,
 			);
@@ -530,7 +571,7 @@
 		1FCC65291A5AC83500DBC837 /* Async */ = {
 			isa = PBXGroup;
 			children = (
-				1FCC652C1A5AC83500DBC837 /* Async.swift */,
+				1FC524521B9DFA3F00853AC9 /* Async.xcodeproj */,
 			);
 			path = Async;
 			sourceTree = "<group>";
@@ -679,6 +720,7 @@
 				1FA369B31A6FEC4F008F2F38 /* PBXTargetDependency */,
 				1FA369B71A6FEC56008F2F38 /* PBXTargetDependency */,
 				1FA369BB1A6FEC5C008F2F38 /* PBXTargetDependency */,
+				1FC524721B9DFB3100853AC9 /* PBXTargetDependency */,
 			);
 			name = "ReactKitCatalog-iOS";
 			productName = "ReactKitCatalog-iOS";
@@ -720,6 +762,10 @@
 				{
 					ProductGroup = 1FCC648C1A5AC44D00DBC837 /* Products */;
 					ProjectRef = 1FCC648B1A5AC44D00DBC837 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 1FC524531B9DFA3F00853AC9 /* Products */;
+					ProjectRef = 1FC524521B9DFA3F00853AC9 /* Async.xcodeproj */;
 				},
 				{
 					ProductGroup = 1FCC658E1A5ACDAA00DBC837 /* Products */;
@@ -788,6 +834,27 @@
 			fileType = wrapper.framework;
 			path = SwiftyJSON.framework;
 			remoteRef = 1FAA78071AC7C67C00C11DA3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FC5245A1B9DFA3F00853AC9 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 1FC524591B9DFA3F00853AC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FC5245E1B9DFA3F00853AC9 /* Async.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Async.framework;
+			remoteRef = 1FC5245D1B9DFA3F00853AC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1FC524601B9DFA3F00853AC9 /* Async.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Async.framework;
+			remoteRef = 1FC5245F1B9DFA3F00853AC9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1FCC65121A5AC44D00DBC837 /* Alamofire.framework */ = {
@@ -981,7 +1048,6 @@
 				1FCC64791A5AC17200DBC837 /* WhoToFollowViewController.swift in Sources */,
 				1F3EFFAC19DEF8D00004CD7D /* TextFieldViewController.swift in Sources */,
 				1F3EFFA219DEF3FD0004CD7D /* AppDelegate.swift in Sources */,
-				1FCC654C1A5AC83500DBC837 /* Async.swift in Sources */,
 				1F85642A1A94C6DB00103F01 /* CalculatorViewController.swift in Sources */,
 				1F3EFFA819DEF3FD0004CD7D /* MasterViewController.swift in Sources */,
 				48E649541ACA336C0076E37A /* ArrayKVOViewModel.swift in Sources */,
@@ -1025,6 +1091,11 @@
 			isa = PBXTargetDependency;
 			name = Haneke;
 			targetProxy = 1FA369BA1A6FEC5C008F2F38 /* PBXContainerItemProxy */;
+		};
+		1FC524721B9DFB3100853AC9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Async iOS";
+			targetProxy = 1FC524711B9DFB3100853AC9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

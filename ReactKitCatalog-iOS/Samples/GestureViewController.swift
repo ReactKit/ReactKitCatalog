@@ -42,9 +42,10 @@ class GestureViewController: UIViewController, UIGestureRecognizerDelegate
             |> merge2All
             |> map { (values: [String??], changedValue: String?) -> String? in
             
-            return "\n"
-                .join(values.map { ($0 ?? "")!! }
-                .filter { !$0.isEmpty })
+            return values
+                .map { ($0 ?? "")!! }
+                .filter { !$0.isEmpty }
+                .joinWithSeparator("\n")
         }
         
         // REACT

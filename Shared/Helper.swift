@@ -11,7 +11,7 @@ import Dollar
 import SwiftTask
 import Alamofire
 import SwiftyJSON
-
+import Async
 
 // pick `count` random elements from `sequence`
 func _pickRandom<S: SequenceType>(sequence: S, _ count: Int) -> [S.Generator.Element]
@@ -55,17 +55,17 @@ func _requestTask(request: Alamofire.Request) -> Task<Void, SwiftyJSON.JSON, Err
         
         print("request to \(urlString)")
         
-        request.responseJSON { request, response, jsonObject, error in
+        request.responseJSON { request, response, result in
             
             print("response from \(urlString)")
             
-            if let error = error {
+            if let error = result.error {
                 reject(error)
                 return
             }
             
             Async.background {
-                let json = JSON(jsonObject!)
+                let json = JSON(result.value!)
                 
                 Async.main {
                     fulfill(json)
