@@ -55,17 +55,17 @@ func _requestTask(request: Alamofire.Request) -> Task<Void, SwiftyJSON.JSON, Err
         
         print("request to \(urlString)")
         
-        request.responseJSON { request, response, result in
+        request.responseJSON { response in
             
             print("response from \(urlString)")
             
-            if let error = result.error {
+            if let error = response.result.error {
                 reject(error)
                 return
             }
             
             Async.background {
-                let json = JSON(result.value!)
+                let json = JSON(response.result.value!)
                 
                 Async.main {
                     fulfill(json)

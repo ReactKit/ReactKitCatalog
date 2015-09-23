@@ -1,9 +1,9 @@
-github "ReactKit/ReactKitCalculator" "swift/2.0" #~> 0.2.3
+github "ReactKit/ReactKitCalculator" "swift/2.0"
 
-github "Alamofire/Alamofire" "swift-2.0" #~> 1.2.3
+github "Alamofire/Alamofire" "3.0.0-beta.1" #~> 1.2.3
 github "SwiftyJSON/SwiftyJSON" "xcode7" #~> 2.2.0
 github "duemunk/Async" "feature/Swift_2.0"
-github "ankurp/Dollar.swift" "swift-2-xcode-7"
+github "ankurp/Dollar.swift" ~> 4.0.1
 #github "Haneke/HanekeSwift" ~> 0.9.1
 github "meteochu/HanekeSwift" "swift-2.0"
-github "marcelofabri/BigBrother" "swift2.0"
+github "marcelofabri/BigBrother" ~> 0.3.0
